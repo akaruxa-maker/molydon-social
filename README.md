@@ -41,3 +41,9 @@ ID stranice nije potrebno upisivati — skripta ga pronađe po imenu stranice.
 `tools/build.py` generira slike 1080×1350 u `media/` i JSON u `queue/`.
 Slike proizvoda su s molydon.hr (`tools/src/`). Cijene su provjerene na
 webshopu 28.09.2026.
+
+## Vizuali (v2)
+
+`tools/render2.py` + `tools/build2.py`. Pozadinske fotografije u `tools/bg/` su s
+Unsplasha (besplatna licenca za komercijalnu upotrebu). Proizvodi su izrezani iz
+slika s molydon.hr, logo je službeni Molydon logo.
