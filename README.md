@@ -1,0 +1,43 @@
+# molydon-social
+
+Automatsko objavljivanje na Facebook i Instagram za Molydon webshop (molydon.hr).
+Isti sustav kao mofit-social: GitHub Action se budi svakih 15 minuta, čita `queue/`
+i objavljuje sve čije je vrijeme došlo. Objavljeno se bilježi u `state/`.
+
+## Ritam (test 28 dana)
+
+| | Vrijeme | Sadržaj |
+|---|---|---|
+| Korisna | 09:00 | savjet, objašnjenje, pitanje i odgovor — bez cijene, FB |
+| Prodajna | 18:00 FB, 18:15 IG | konkretan artikl, cijena, link |
+| Nedjelja | 10:00 | samo korisna |
+
+- **1.–14.10.** dvije objave dnevno
+- **15.–28.10.** jedna objava dnevno (samo prodajna, 18:00)
+- Uspoređuje se: doseg, klikovi na link, komentari, dijeljenja, poruke, prodaja
+
+Nakon 25.10. vrijeme u `when` ide na `+01:00`.
+
+## Odobravanje
+
+Svaka objava ima `"approved": false` dok je ne odobriš. Takve se preskaču.
+Kad je odobrena, polje se mijenja u `true` ili se briše.
+
+## Što treba jednom postaviti
+
+1. Facebook račun kojim se radi token mora biti admin stranice
+   **Molydon webshop auto dijelova**, a Instagram **@molydon_webshop**
+   povezan s tom stranicom (Business/Creator račun).
+2. Meta token s dozvolama `pages_show_list`, `pages_read_engagement`,
+   `pages_manage_posts`, `instagram_basic`, `instagram_content_publish`.
+3. Token u **Settings → Secrets and variables → Actions** kao `META_TOKEN`.
+   Nikad u kod.
+4. Proba: **Actions → Objavi → Run workflow → dry run**.
+
+ID stranice nije potrebno upisivati — skripta ga pronađe po imenu stranice.
+
+## Kartice
+
+`tools/build.py` generira slike 1080×1350 u `media/` i JSON u `queue/`.
+Slike proizvoda su s molydon.hr (`tools/src/`). Cijene su provjerene na
+webshopu 28.09.2026.
