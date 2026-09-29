@@ -375,41 +375,146 @@ Ako je vrijeme za nove 👉 https://www.molydon.hr/zimske-gume
 #Gume #SigurnaVožnja #ZimskeGume #Molydon
 """)
 
-sale_post(OUT / "media/p07-mak-davinci.jpg", None,
-          [("MAK DaVinci 17", WHITE), ("Gloss Black", YEL)],
-          ["6,5J × 17 · 5x112 · ET43", "Rupa glavčine 57,1 mm", "Set od 4: 735,24 €"],
-          cutout("mak-davinci", thr=236), "183,81 €", "po felgi", "ALU FELGA",
-          prod_box=(300, 520, 1060, 1220), badge=(215, 1010))
-L7 = U + "davinci-65-17-43-5x112-mak-5710-gloss-black-f6570brgb43ve3y"
-post("2026-10-07-1800-p-mak-davinci-fb", "2026-10-07T18:00:00+02:00", ["fb:molydon"], "p07-mak-davinci.jpg", f"""
-✨ MAK DAVINCI 17" GLOSS BLACK — 183,81 € PO FELGI
+photo_sale_post(OUT / "media/p07-krovni-octavia.jpg", "roof-forest",
+                [("Krovni nosač", WHITE), ("Škoda Octavia III", YEL)],
+                ["Menabo Brio · 2013.–2020.", "Za bicikle, kutiju ili skije", "Na zalihi", "U tražilicu: krovni nosač + auto"],
+                "124,50 €", "komplet", "MENABO", bgopts={"darken_top": 0.85, "bright": 0.85})
+L7 = U + "krovni-nosac-menabo-brio-skoda-octavia-3"
+post("2026-10-07-1800-p-krovni-fb", "2026-10-07T18:00:00+02:00", ["fb:molydon"], "p07-krovni-octavia.jpg", f"""
+🚗 VOZIŠ ŠKODU OCTAVIU III? KROVNI NOSAČ — 124,50 €
 
-Crne sjajne alu felge s deset krakova — auto izgleda dobro i u studenom. 😎
+Menabo Brio krovni nosač za Škodu Octaviju III (2013.–2020.) — siguran, pouzdan i jednostavan za montažu. 👍
 
-✅ 6,5J × 17"
-✅ Razmak rupa 5x112, ET43
-✅ Rupa glavčine 57,1 mm
-✅ Talijanski proizvođač felgi MAK
+✅ Za krovnu kutiju, nosače bicikala ili skija
+✅ Talijanski proizvođač Menabo
 ✅ Na zalihi
-
-💶 Set od 4 felge: 735,24 € (prodaja u kompletu od 4)
-
-📌 Prije narudžbe provjeri PCD, ET i rupu glavčine za svoj auto — ili klikni „Provjera ugradnje” na stranici artikla i pošalji nam podatke vozila.
+🚚 Dostava na području cijele Hrvatske, rok 7 radnih dana
 
 👉 {L7}
 
-Tražiš druge dimenzije? Na molydon.hr felge možeš filtrirati po marki i modelu auta.
+🔎 Voziš nešto drugo? U tražilicu na Molydonu upiši:
+KROVNI NOSAČ + MARKA + MODEL AUTA
+i odmah dobiješ nosače za svoje vozilo. 😎
 
-#AluFelge #MAK #DaVinci #Felge #5x112 #Molydon
+#KrovniNosači #Menabo #ŠkodaOctavia #KrovnaKutija #Molydon
 """)
-ig("2026-10-07-1815-p-mak-davinci-ig", "2026-10-07T18:15:00+02:00", "p07-mak-davinci.jpg", """
-✨ MAK DaVinci 17" Gloss Black
-6,5J × 17" · 5x112 · ET43
-183,81 € po felgi · set od 4: 735,24 €
+ig("2026-10-07-1815-p-krovni-ig", "2026-10-07T18:15:00+02:00", "p07-krovni-octavia.jpg", """
+🚗 Krovni nosač Menabo Brio za Škodu Octaviju III
+124,50 € · na zalihi
+
+🔎 Drugi auto? U tražilicu: krovni nosač + marka + model
 
 Link u profilu 👉 molydon.hr
 
-#alufelge #mak #felge #blackwheels #molydon
+#krovninosaci #menabo #skodaoctavia #molydon #roadtrip
+""")
+
+# ================================================================ SERIJA: AUTO DIJELOVI (tjedan 2)
+AD = U + "autodijelovi/"
+
+photo_sale_post(OUT / "media/a01-katalog.jpg", "lift",
+                [("270.000+", YEL), ("auto dijelova", WHITE)],
+                ["1. Odaberi marku", "2. Odaberi model", "3. Odaberi motor", "Vidiš samo dijelove za svoj auto"],
+                "270.000+", "dijelova", "KATALOG", bgopts={"darken_top": 0.85, "bright": 0.9})
+post("2026-10-08-1800-a-katalog-fb", "2026-10-08T18:00:00+02:00", ["fb:molydon"], "a01-katalog.jpg", f"""
+🔧 AUTO DIJELOVI ZA TVOJ AUTO — U 3 KLIKA
+
+Na Molydonu je online katalog s više od 270.000 auto dijelova. Nema pogađanja šifri ni zvanja po trgovinama. 😉
+
+1️⃣ Odaberi marku
+2️⃣ Odaberi model
+3️⃣ Odaberi motor
+
+…i vidiš samo dijelove koji odgovaraju tvom vozilu.
+
+✅ Originalni i zamjenski dijelovi
+✅ Kočnice, filteri, ovjes, remeni, kvačilo, elektrika…
+✅ Dostava na području cijele Hrvatske već od 5,50 €
+✅ Stručna pomoć ako zapne
+
+👉 {AD}
+
+Za mehaničare i za one koji sami servisiraju auto. 🛠️
+
+#AutoDijelovi #Servis #RezervniDijelovi #Molydon
+""")
+
+photo_sale_post(OUT / "media/a02-kocnice.jpg", "brake",
+                [("Kočnice", WHITE), ("prije zime", YEL)],
+                ["Diskovi i pločice", "Kočione čeljusti", "Kočiona tekućina", "Za tvoj auto — po modelu i motoru"],
+                "5,50 €", "cijela Hrvatska", "DOSTAVA OD", bgopts={"darken_top": 0.85, "bright": 0.85})
+post("2026-10-10-1800-a-kocnice-fb", "2026-10-10T18:00:00+02:00", ["fb:molydon"], "a02-kocnice.jpg", f"""
+🛑 KOČNICE PRIJE ZIME — PROVJERI DOK JE SUHO
+
+Na mokroj i skliskoj cesti kočnice rade najteži posao. Znakovi da je vrijeme za servis:
+
+⚠️ škripanje ili struganje pri kočenju
+⚠️ vibracije u pedali ili volanu
+⚠️ auto „vuče” na jednu stranu
+⚠️ lampica kočnica na ploči
+
+Što nudimo u katalogu:
+✅ Kočioni diskovi i pločice
+✅ Kočione čeljusti i bubanj-kočnice
+✅ Kočiona tekućina
+
+Samo odaberi marku, model i motor — i vidiš dijelove koji odgovaraju tvom autu. 🚗
+🚚 Dostava na području cijele Hrvatske već od 5,50 €
+
+👉 {AD}
+
+#Kočnice #AutoDijelovi #Servis #SigurnaVožnja #Molydon
+""")
+
+photo_sale_post(OUT / "media/a03-servis.jpg", "oil",
+                [("Mali servis", WHITE), ("prije zime", YEL)],
+                ["Filter ulja i motorno ulje", "Filter zraka", "Filter kabine", "Filter goriva"],
+                "5,50 €", "cijela Hrvatska", "DOSTAVA OD", bgopts={"darken_top": 0.88, "bright": 0.85})
+post("2026-10-12-1800-a-servis-fb", "2026-10-12T18:00:00+02:00", ["fb:molydon"], "a03-servis.jpg", f"""
+🛢️ MALI SERVIS PRIJE ZIME? SVE NA JEDNOM MJESTU
+
+Hladni startovi najviše troše motor — zato je jesen najbolje vrijeme za svježe ulje i nove filtere. 🍂
+
+✅ Motorno ulje i filter ulja
+✅ Filter zraka
+✅ Filter kabine — čist zrak i manje magljenja stakala
+✅ Filter goriva
+✅ Kompleti filtera za tvoj model
+
+🔎 Odaberi marku, model i motor — katalog prikazuje samo dijelove koji odgovaraju.
+🚚 Dostava na području cijele Hrvatske već od 5,50 €
+
+👉 {AD}
+
+⚙️ Pametni vozači servisiraju na vrijeme. Ostali plaćaju popravke. 😉
+
+#Servis #FilterUlja #MotornoUlje #AutoDijelovi #Molydon
+""")
+
+photo_sale_post(OUT / "media/a04-brisaci.jpg", "wiper",
+                [("Vidiš li cestu", WHITE), ("kad pada kiša?", YEL)],
+                ["Ostavljaju pruge ili škripe?", "Vrijeme je za nove metlice", "Po modelu tvog auta"],
+                "5,50 €", "cijela Hrvatska", "DOSTAVA OD", bgopts={"darken_top": 0.88, "bright": 0.9})
+post("2026-10-13-1800-a-brisaci-fb", "2026-10-13T18:00:00+02:00", ["fb:molydon"], "a04-brisaci.jpg", f"""
+🌧️ VIDIŠ LI CESTU KAD PADA KIŠA?
+
+Jesen i zima najteže su razdoblje za metlice brisača: lišće, pijesak, led i sol. Guma se stvrdne i počne ostavljati pruge baš kad ti najviše treba čisto staklo.
+
+Znakovi da je vrijeme za nove metlice:
+⚠️ ostavljaju pruge ili mrlje
+⚠️ škripe ili „skaču” po staklu
+⚠️ guma je napukla ili tvrda
+
+✅ Metlice brisača i gumice po modelu tvog auta
+✅ Stražnji brisači
+✅ Brisači, pumpice i brizgaljke
+
+🔎 Odaberi marku, model i motor u katalogu i vidiš što odgovara.
+🚚 Dostava na području cijele Hrvatske već od 5,50 €
+
+👉 {AD}
+
+#Brisači #AutoDijelovi #Zima #SigurnaVožnja #Molydon
 """)
 
 for p in POSTS:

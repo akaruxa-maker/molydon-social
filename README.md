@@ -47,3 +47,9 @@ webshopu 28.09.2026.
 `tools/render2.py` + `tools/build2.py`. Pozadinske fotografije u `tools/bg/` su s
 Unsplasha (besplatna licenca za komercijalnu upotrebu). Proizvodi su izrezani iz
 slika s molydon.hr, logo je službeni Molydon logo.
+
+## Pravila sadržaja
+
+- **Felge:** samo PNG s prozirnom pozadinom (između krakova se vidi pozadina). Kataloške slike s bijelom pozadinom se ne koriste.
+- **Krovni nosači:** jedna objava tjedno, srijedom u 18:00.
+- **Auto dijelovi:** serija „servis prije zime” (katalog, kočnice, mali servis, brisači) — cijene ovise o vozilu pa se ističe dostava od 5,50 € i odabir marka → model → motor.
