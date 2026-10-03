@@ -50,6 +50,8 @@ slika s molydon.hr, logo je službeni Molydon logo.
 
 ## Pravila sadržaja
 
+- **Bez poziva na komentare ili poruke.** Komentari su na stranici isključeni. Nikad „napiši u komentar”, „pošalji poruku” i sl. — CTA je uvijek webshop (link, tražilica, „Provjera ugradnje” na artiklu) ili info@molydon.hr.
+
 - **Felge:** samo PNG s prozirnom pozadinom (između krakova se vidi pozadina). Kataloške slike s bijelom pozadinom se ne koriste.
 - **Krovni nosači:** jedna objava tjedno, srijedom u 18:00.
 - **Auto dijelovi:** serija „servis prije zime” (katalog, kočnice, mali servis, brisači) — cijene ovise o vozilu pa se ističe dostava od 5,50 € i odabir marka → model → motor.
