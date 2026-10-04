@@ -4,13 +4,25 @@ Molydon webshop — automatsko objavljivanje na Facebook i Instagram.
 
 Cita queue/*.json, objavljuje sve sto je dospjelo, i biljezi rezultat u state/.
 Pokrece se iz GitHub Actions (cron) ili rucno: python3 publish.py [--dry-run]
+
+Tocno vrijeme (Facebook): GitHub cron u praksi kasni i po nekoliko sati, pa se
+Facebook objave unaprijed predaju Facebooku kao ZAKAZANE (scheduled_publish_time)
+cim upadnu u prozor od SCHEDULE_AHEAD_H sati. Facebook ih onda sam objavi u tocno
+vrijeme iz "when". Ako se stavka u queue/ promijeni ili joj se makne odobrenje
+prije tog vremena, zakazana objava se brise i zakazuje ponovno (ili ne).
+Instagram i FB story ne podrzavaju zakazivanje kroz API -> objavljuju se kad dospiju.
 """
-import json, os, sys, time, urllib.parse, urllib.request, datetime as dt, pathlib
+import json, os, sys, time, hashlib, urllib.parse, urllib.request, datetime as dt, pathlib
 
 ROOT = pathlib.Path(__file__).parent
 API = os.environ.get("GRAPH_VERSION", "v25.0")
 BASE = f"https://graph.facebook.com/{API}"
 DRY = "--dry-run" in sys.argv
+
+# Koliko unaprijed se FB objave predaju Facebooku na zakazivanje.
+SCHEDULE_AHEAD = dt.timedelta(hours=float(os.environ.get("SCHEDULE_AHEAD_H", "48")))
+# Meta trazi najmanje 10 min do objave; ostavljamo malu rezervu.
+MIN_LEAD = dt.timedelta(minutes=12)
 
 # Javni URL na kojem Meta cita medije. Postavlja ga workflow.
 MEDIA_BASE = os.environ.get("MEDIA_BASE_URL", "").rstrip("/")
@@ -26,8 +38,8 @@ def call(method, path, params, retries=3):
     last = None
     for attempt in range(retries):
         try:
-            if method == "GET":
-                req = urllib.request.Request(url + "?" + data.decode())
+            if method in ("GET", "DELETE"):
+                req = urllib.request.Request(url + "?" + data.decode(), method=method)
             else:
                 req = urllib.request.Request(url, data=data, method="POST")
             with urllib.request.urlopen(req, timeout=120) as r:
@@ -190,12 +202,24 @@ def post_instagram(acc, item, token):
 
 
 # ---------------------------------------------------------------- Facebook
-def post_facebook(acc, item, token):
+def fb_schedulable(item):
+    return item["type"] == "post"
+
+
+def post_facebook(acc, item, token, schedule_at=None):
+    """schedule_at (aware datetime) -> objava se predaje Facebooku kao zakazana."""
     page = resolve_page_id(acc, token)
     token = page_token(page, token)
     kind = item["type"]
     media = item.get("media", [])
     caption = item.get("caption", "")
+
+    sched = {}
+    if schedule_at is not None:
+        if not fb_schedulable(item):
+            raise RuntimeError(f"tip {kind} se ne moze zakazati na Facebooku")
+        sched = {"published": "false",
+                 "scheduled_publish_time": str(int(schedule_at.timestamp()))}
 
     if kind == "post" and media:
         vids = [m for m in media if m.lower().endswith((".mp4", ".mov"))]
@@ -204,6 +228,7 @@ def post_facebook(acc, item, token):
                 "file_url": media_url(vids[0]),
                 "description": caption,
                 "access_token": token,
+                **sched,
             })
             return [r.get("id")]
         if len(media) == 1:
@@ -211,6 +236,7 @@ def post_facebook(acc, item, token):
                 "url": media_url(media[0]),
                 "caption": caption,
                 "access_token": token,
+                **sched,
             })
             return [r.get("post_id") or r.get("id")]
         # vise slika: prvo unpublished photo id-evi, pa feed
@@ -220,14 +246,14 @@ def post_facebook(acc, item, token):
                 "url": media_url(m), "published": "false", "access_token": token,
             })
             ids.append(r["id"])
-        params = {"message": caption, "access_token": token}
+        params = {"message": caption, "access_token": token, **sched}
         for i, pid in enumerate(ids):
             params[f"attached_media[{i}]"] = json.dumps({"media_fbid": pid})
         r = call("POST", f"{page}/feed", params)
         return [r["id"]]
 
     if kind == "post":  # samo tekst
-        r = call("POST", f"{page}/feed", {"message": caption, "access_token": token})
+        r = call("POST", f"{page}/feed", {"message": caption, "access_token": token, **sched})
         return [r["id"]]
 
     if kind == "story":
@@ -245,11 +271,24 @@ def post_facebook(acc, item, token):
 
 
 # ---------------------------------------------------------------- glavni dio
+def parse_when(s):
+    w = dt.datetime.fromisoformat(s)
+    return w if w.tzinfo else w.replace(tzinfo=dt.timezone.utc)
+
+
+def item_hash(it):
+    """Otisak sadrzaja stavke; promjena -> zakazana objava se zakazuje ponovno."""
+    keys = ("when", "targets", "type", "media", "caption")
+    blob = json.dumps({k: it.get(k) for k in keys}, ensure_ascii=False, sort_keys=True)
+    return hashlib.sha256(blob.encode()).hexdigest()[:16]
+
+
 def main():
     accounts = json.loads((ROOT / "accounts.json").read_text())
     now = dt.datetime.now(dt.timezone.utc)
     state_dir = ROOT / "state"
     state_dir.mkdir(exist_ok=True)
+    failed = 0
 
     if DRY:
         # provjera tokena i pristupa stranicama (samo citanje)
@@ -282,27 +321,58 @@ def main():
         it = json.loads(f.read_text())
         it["_file"] = f.name
         items.append(it)
+    by_id = {it["id"]: it for it in items}
 
+    # 1) Zakazane FB objave koje jos nisu izasle: ako je stavka u queue/
+    #    promijenjena, maknuta ili joj je povuceno odobrenje -> obrisi i (re)procesiraj.
+    for sf in sorted(state_dir.glob("*.json")):
+        st = json.loads(sf.read_text())
+        if not st.get("scheduled_for"):
+            continue
+        if parse_when(st["scheduled_for"]) <= now + dt.timedelta(minutes=1):
+            continue  # vec je izaslo (ili upravo izlazi) -> gotovo
+        it = by_id.get(st["id"])
+        if it is not None and it.get("approved") is not False and item_hash(it) == st.get("hash"):
+            continue  # nepromijenjeno, ostaje zakazano
+        why = ("maknuta iz queue/" if it is None else
+               "povuceno odobrenje" if it.get("approved") is False else "promijenjena")
+        label = f"{st['id']} -> {st.get('target')}"
+        if DRY:
+            log("DRY otkazao bih zakazano", label, f"({why})")
+            continue
+        try:
+            acc = accounts[st["target"]]
+            tok = os.environ.get(acc.get("token_env", "META_TOKEN"), "")
+            ptok = page_token(resolve_page_id(acc, tok), tok)
+            for pid in st.get("ids", []):
+                call("DELETE", str(pid), {"access_token": ptok})
+            sf.unlink()
+            log("OTKAZANO", label, f"({why})")
+        except Exception as e:
+            log("FAIL otkazivanje", label, e)
+            failed += 1
+
+    # 2) Sto treba objaviti sada, a sto predati Facebooku na zakazivanje.
     todo = []
     for it in items:
         if (state_dir / f"{it['id']}.json").exists():
             continue
         if it.get("approved") is False:
             continue  # ceka odobrenje
-        when = dt.datetime.fromisoformat(it["when"])
-        if when.tzinfo is None:
-            when = when.replace(tzinfo=dt.timezone.utc)
+        when = parse_when(it["when"])
         if when <= now:
-            todo.append((when, it))
+            todo.append((when, it, None))
+        elif (all(t.startswith("fb:") for t in it["targets"]) and fb_schedulable(it)
+              and now + MIN_LEAD <= when <= now + SCHEDULE_AHEAD):
+            todo.append((when, it, when))
 
     if not todo:
-        log("nema nista za objaviti")
-        return 0
+        log("nema nista za objaviti ni zakazati")
+        return 1 if failed else 0
 
     todo.sort(key=lambda x: x[0])
-    failed = 0
 
-    for when, it in todo:
+    for when, it, schedule_at in todo:
         for target in it["targets"]:
             acc = accounts.get(target)
             if not acc:
@@ -315,19 +385,32 @@ def main():
                 failed += 1
                 continue
             label = f"{it['id']} -> {target} ({it['type']})"
+            mode = f"ZAKAZANO za {when.isoformat()}" if schedule_at else "OBJAVLJENO"
             if DRY:
-                log("DRY", label, [media_url(m) for m in it.get("media", [])])
+                log("DRY", mode, label, [media_url(m) for m in it.get("media", [])])
                 continue
             try:
-                ids = (post_instagram if target.startswith("ig:") else post_facebook)(acc, it, token)
-                log("OK ", label, ids)
-                (state_dir / f"{it['id']}.json").write_text(json.dumps({
-                    "id": it["id"], "target": target, "ids": ids,
-                    "published_at": dt.datetime.now(dt.timezone.utc).isoformat(),
-                }, ensure_ascii=False, indent=2))
+                if target.startswith("ig:"):
+                    ids = post_instagram(acc, it, token)
+                else:
+                    ids = post_facebook(acc, it, token, schedule_at=schedule_at)
+                log("OK ", mode, label, ids)
+                rec = {"id": it["id"], "target": target, "ids": ids}
+                if schedule_at:
+                    rec["scheduled_for"] = when.isoformat()
+                    rec["scheduled_at"] = dt.datetime.now(dt.timezone.utc).isoformat()
+                    rec["hash"] = item_hash(it)
+                else:
+                    rec["published_at"] = dt.datetime.now(dt.timezone.utc).isoformat()
+                (state_dir / f"{it['id']}.json").write_text(
+                    json.dumps(rec, ensure_ascii=False, indent=2))
             except Exception as e:
-                log("FAIL", label, e)
-                failed += 1
+                if schedule_at:
+                    # nije katastrofa: kad dospije, objavit ce se odmah kao prije
+                    log("UPOZORENJE zakazivanje nije uspjelo, objavit ce se kad dospije:", label, e)
+                else:
+                    log("FAIL", label, e)
+                    failed += 1
 
     return 1 if failed else 0
 

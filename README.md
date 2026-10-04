@@ -4,6 +4,22 @@ Automatsko objavljivanje na Facebook i Instagram za Molydon webshop (molydon.hr)
 Isti sustav kao mofit-social: GitHub Action se budi svakih 15 minuta, čita `queue/`
 i objavljuje sve čije je vrijeme došlo. Objavljeno se bilježi u `state/`.
 
+## Točno vrijeme objave (Facebook)
+
+GitHub cron u praksi ne radi svakih 15 min nego otprilike svakih 3–5 sati, pa bi
+objave kasnile satima. Zato skripta Facebook objave **predaje Facebooku kao zakazane**
+čim su do 48 h udaljene (`SCHEDULE_AHEAD_H`) — Facebook ih onda sam objavi točno
+u vrijeme iz `when`. U `state/` takva stavka ima `scheduled_for` umjesto `published_at`.
+
+- Ako se stavka u `queue/` promijeni (tekst, slika, vrijeme) prije objave, zakazana
+  objava se briše i zakazuje ponovno. Ako se postavi `"approved": false` ili se
+  datoteka obriše, zakazana objava se briše. (Promjena vrijedi tek kad se Action
+  sljedeći put pokrene — do nekoliko sati.)
+- Zakazane objave vide se u Meta Business Suite → Planer.
+- Instagram i FB story ne mogu se zakazati kroz API — objavljuju se kad dospiju
+  (uz kašnjenje GitHub crona).
+- Ako zakazivanje ne uspije, stavka se objavi kad dospije, kao prije.
+
 ## Ritam (test 28 dana)
 
 | | Vrijeme | Sadržaj |
