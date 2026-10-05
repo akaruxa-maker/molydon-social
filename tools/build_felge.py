@@ -10,7 +10,7 @@ AF="https://www.molydon.hr/aluminijske-felge"
 
 # F1 — isplativost
 img=background("wheel-snow",darken_top=0.9,darken_bottom=0.9,bright=0.8); d=ImageDraw.Draw(img); logo(img)
-y=headline(d,175,[("Zimski set",WHITE),("na alu felgama",YEL)],size=90); y+=16
+y=headline(d,HEAD_Y,[("Zimski set",WHITE),("na alu felgama",YEL)],size=90); y+=16
 checklist(d,y,["Isplati se za 3-4 godine samo kroz montažu","Bez čekanja na termin","Gume se ne muče premontažom"],size=34,maxw=600)
 paste_product(img,rgba("gina-cut"),(470,640,1060,1215)); footer(img,cta="ODABERI FELGE ZA SVOJ AUTO"); save(img,OUT/"media/f01-isplativost.jpg")
 post("2026-10-06-0900-f-isplativost-fb","2026-10-06T09:00:00+02:00","f01-isplativost.jpg",f"""

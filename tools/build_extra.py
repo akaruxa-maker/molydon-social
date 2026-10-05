@@ -34,7 +34,7 @@ Hladnoća spušta tlak u gumama — zato je jesen pravo vrijeme da kompresor ima
 
 LD="https://www.molydon.hr/?route=product/category&path=80000000_80000004_80000132"
 img=background("wheel-bbs",darken_top=0.9,darken_bottom=0.9,bright=0.7); d=ImageDraw.Draw(img); logo(img)
-y=headline(d,175,[("Distanceri kotača",WHITE),("— koji trebam?",YEL)],size=86); y+=16
+y=headline(d,HEAD_Y,[("Distanceri kotača",WHITE),("— koji trebam?",YEL)],size=86); y+=16
 checklist(d,y,["Prolazni ili vijčani (M12/M14)","PCD i provrt moraju odgovarati","170+ modela · EIBACH i CNS"],size=34,maxw=620)
 dist=Image.open(SRC/"distancer-cut.png").convert("RGBA")
 paste_product(img,dist,(330,680,1060,1100)); price_badge(img,230,1030,"32,30 €","po komadu","OD",r=135)

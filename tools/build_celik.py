@@ -9,7 +9,7 @@ W_=Image.open(SRC/"celicna-cut.png").convert("RGBA")
 CF="https://www.molydon.hr/celicne-felge"
 def card(out,bg,head,pts,badge=None,bgopts=None,cta="ČELIČNE FELGE NA MOLYDON.HR"):
     img=background(bg,**(bgopts or {"darken_top":0.88,"bright":0.8})); d=ImageDraw.Draw(img); logo(img)
-    y=headline(d,175,head,size=86); y+=16
+    y=headline(d,HEAD_Y,head,size=86); y+=16
     checklist(d,y,pts,size=34,maxw=600)
     paste_product(img,W_,(430,640,1060,1215))
     if badge: price_badge(img,230,1040,*badge,r=135)

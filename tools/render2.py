@@ -91,10 +91,15 @@ def background(name, darken_top=0.78, darken_bottom=0.85, blur=0, bright=1.0):
     return img
 
 
-def logo(img, x=60, y=52, width=330):
-    lg = Image.open(SRC / "logo.png")
+def logo(img, x=18, y=8, width=560):
+    """Službeni Molydon logo sa sjajem, stopljen preko pozadine (screen)."""
+    lg = Image.open(SRC / "logo-screen.png").convert("RGB")
     lg = lg.resize((width, int(lg.height * width / lg.width)), Image.LANCZOS)
-    img.alpha_composite(lg, (x, y))
+    region = img.crop((x, y, x + lg.width, y + lg.height)).convert("RGB")
+    img.paste(ImageChops.screen(region, lg), (x, y))
+
+
+HEAD_Y = 205
 
 
 def wrap(d, text, fnt, maxw):
@@ -170,7 +175,7 @@ def info_post(out, bg, tag, head, points, big=None, big_sub=None, bgopts=None):
     ft = font("Bold", 28); tw = d.textlength(tag, font=ft)
     d.rounded_rectangle((W - 60 - tw - 44, 62, W - 60, 118), 28, fill=YEL)
     d.text((W - 60 - tw - 22, 72), tag, font=ft, fill=BLACK)
-    y = headline(d, 175, head)
+    y = headline(d, HEAD_Y, head)
     y += 22
     if big:
         fb = font("Bold", 108); tw = d.textlength(big, font=fb)
@@ -198,7 +203,7 @@ def sale_post(out, bg, head, points, prod, price, unit, label=None, prod2=None, 
     img = background(bg, **(bgopts or {}))
     d = ImageDraw.Draw(img)
     logo(img)
-    y = headline(d, 175, head, size=88)
+    y = headline(d, HEAD_Y, head, size=88)
     y += 16
     checklist(d, y, points, size=34, maxw=560)
     if prod2 is None:
@@ -217,7 +222,7 @@ def photo_sale_post(out, bg, head, points, price, unit, label=None, inset=None, 
     img = background(bg, **(bgopts or {}))
     d = ImageDraw.Draw(img)
     logo(img)
-    y = headline(d, 175, head, size=88)
+    y = headline(d, HEAD_Y, head, size=88)
     y += 16
     if inset:
         ins = Image.open(SRC / f"{inset}.png").convert("RGB")
