@@ -91,15 +91,14 @@ def background(name, darken_top=0.78, darken_bottom=0.85, blur=0, bright=1.0):
     return img
 
 
-def logo(img, x=18, y=8, width=560):
-    """Službeni Molydon logo sa sjajem, stopljen preko pozadine (screen)."""
-    lg = Image.open(SRC / "logo-screen.png").convert("RGB")
+def logo(img, x=56, y=52, width=520):
+    """Službeni Molydon logo (s molydon.hr), čist, bez sjaja."""
+    lg = Image.open(SRC / "logo-flat.png").convert("RGBA")
     lg = lg.resize((width, int(lg.height * width / lg.width)), Image.LANCZOS)
-    region = img.crop((x, y, x + lg.width, y + lg.height)).convert("RGB")
-    img.paste(ImageChops.screen(region, lg), (x, y))
+    img.alpha_composite(lg, (x, y))
 
 
-HEAD_Y = 205
+HEAD_Y = 180
 
 
 def wrap(d, text, fnt, maxw):
