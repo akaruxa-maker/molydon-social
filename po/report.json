@@ -77,14 +77,15 @@
    "src": "https://profioprema.com.hr/image/catalog/nosaci/Boks-dachowy-MAMMOOTH-ADAMANTIS-460BL-do-75kg-460L.jpeg"
   },
   "when": "2026-10-13T10:00:00+02:00",
-  "status": "OK"
+  "status": "OK",
+  "slika_provjerena": false
  },
  {
   "id": "zimske-gume",
   "promovira": "Zimske gume",
   "ocekivano": "zimske-gume",
   "odluka": "category",
-  "prije_url": "https://profioprema.com.hr/255-50-r20-109v-michelin-primacy-5-energy-ljetna-guma",
+  "prije_url": "https://profioprema.com.hr/315-30-r22-107y-michelin-ps4-s-n0-ljetna-guma",
   "kandidati": [
    {
     "type": "category",
@@ -143,7 +144,8 @@
   "slika": "media/po/story-zimske-gume.jpg",
   "proizvod_na_slici": null,
   "when": "2026-10-14T10:00:00+02:00",
-  "status": "OK"
+  "status": "OK",
+  "slika_provjerena": true
  },
  {
   "id": "hidraulicne-prese",
@@ -225,45 +227,16 @@
    "src": "https://profioprema.com.hr/image/catalog/profi/47/stroj-za-obradu-metala-s-hidraulickim-pogonom-47b618-0.jpg"
   },
   "when": "2026-10-15T10:00:00+02:00",
-  "status": "OK"
+  "status": "OK",
+  "slika_provjerena": true
  },
  {
   "id": "kompresori",
   "promovira": "Kompresori",
   "ocekivano": "kompresori",
-  "odluka": "search",
-  "prije_url": "https://profioprema.com.hr/aparat-za-sladoled-i-sorbet-s-kompresorom-2-l-150-w-3-programa-bez-zamrzavanja-posude-po-24119",
+  "odluka": "manual",
+  "prije_url": "https://profioprema.com.hr/kompresori/kompresor-za-radionicu-12-v-7-bar-2-po-12050",
   "kandidati": [
-   {
-    "type": "search",
-    "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=kompresor",
-    "status": 200,
-    "total": 81,
-    "sampled": 81,
-    "relevant": 76,
-    "share": 0.94,
-    "variants": 63
-   },
-   {
-    "type": "category",
-    "url": "https://profioprema.com.hr/oprema-za-kampere",
-    "status": 200,
-    "total": 120,
-    "sampled": 100,
-    "relevant": 45,
-    "share": 0.45,
-    "variants": 37
-   },
-   {
-    "type": "category",
-    "url": "https://profioprema.com.hr/auto-oprema-i-radionice",
-    "status": 200,
-    "total": 1267,
-    "sampled": 100,
-    "relevant": 22,
-    "share": 0.22,
-    "variants": 22
-   },
    {
     "type": "category",
     "url": "https://profioprema.com.hr/kompresori",
@@ -275,37 +248,19 @@
     "variants": 16
    },
    {
-    "type": "category",
-    "url": "https://profioprema.com.hr/dijagnostika-i-punjaci",
+    "type": "search",
+    "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=kompresor",
     "status": 200,
-    "total": 19,
-    "sampled": 19,
-    "relevant": 4,
-    "share": 0.21,
-    "variants": 3
+    "total": 81,
+    "sampled": 81,
+    "relevant": 20,
+    "share": 0.25,
+    "variants": 16
    }
   ],
-  "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=kompresor",
-  "http": 200,
-  "h1": "Traži - kompresor",
-  "ukupno": 81,
-  "relevantnih": "76/81",
-  "udio": 0.94,
-  "varijanti": 63,
-  "mobilno": {
-   "status": 200,
-   "viewport": true,
-   "products": 24,
-   "ok": true
-  },
-  "slika": "media/po/story-kompresori.jpg",
-  "proizvod_na_slici": {
-   "product": "Aparat za sladoled i sorbet s kompresorom, 2 L, 150 W, 3 programa, bez zamrzavanja posude",
-   "product_url": "https://profioprema.com.hr/aparat-za-sladoled-i-sorbet-s-kompresorom-2-l-150-w-3-programa-bez-zamrzavanja-posude-po-24119",
-   "src": "https://profioprema.com.hr/image/catalog/profi/82/aparat-za-sladoled-i-sorbet-s-8257e2-0.jpg"
-  },
-  "when": "2026-10-16T10:00:00+02:00",
-  "status": "OK"
+  "url": null,
+  "status": "RUČNA PROVJERA",
+  "razlog": "najbliže: https://profioprema.com.hr/kompresori — 20/36 relevantnih (56 %), potrebno ≥3 i ≥60 %"
  },
  {
   "id": "dizalice",
@@ -384,8 +339,9 @@
    "product_url": "https://profioprema.com.hr/dizalice/niska-podna-dizalica-za-autoservis-na-izvlacenje-nosivost-454-kg-po-12177",
    "src": "https://profioprema.com.hr/image/catalog/profi/98/dizalica-za-vozilo-453-6-kg-0-5-t-64-cm-98e7e9-0.jpg"
   },
-  "when": "2026-10-17T10:00:00+02:00",
-  "status": "OK"
+  "when": "2026-10-16T10:00:00+02:00",
+  "status": "OK",
+  "slika_provjerena": false
  },
  {
   "id": "grijalice",
@@ -454,8 +410,9 @@
    "product_url": "https://profioprema.com.hr/grijalice/dizelska-topovska-grijalica-19-l-po-15650",
    "src": "https://profioprema.com.hr/image/catalog/profi/5e/plinska-grijalica-s-termostatom-19-l-5e7202-0.jpg"
   },
-  "when": "2026-10-18T10:00:00+02:00",
-  "status": "OK"
+  "when": "2026-10-17T10:00:00+02:00",
+  "status": "OK",
+  "slika_provjerena": false
  },
  {
   "id": "kamini",
@@ -596,8 +553,9 @@
    "product_url": "https://profioprema.com.hr/regali-i-police/metalni-regal-s-4-zicane-police-na-kotacima-76-2-x-31-3-x-160-cm-bijeli-po-25236",
    "src": "https://profioprema.com.hr/image/catalog/profi/9e/metalni-regal-s-4-zicane-polic-9eb355-0.jpg"
   },
-  "when": "2026-10-19T10:00:00+02:00",
-  "status": "OK"
+  "when": "2026-10-18T10:00:00+02:00",
+  "status": "OK",
+  "slika_provjerena": true
  },
  {
   "id": "ledomati",
@@ -636,35 +594,36 @@
    "product_url": "https://profioprema.com.hr/ledomati/profesionalni-ledomat-za-ugostiteljstvo-66-64-74-cm-po-17376",
    "src": "https://profioprema.com.hr/image/catalog/profi/74/profesionalni-ledomat-sa-samociscenjem-136-1-k-7401a4-0.jpg"
   },
-  "when": "2026-10-20T10:00:00+02:00",
-  "status": "OK"
+  "when": "2026-10-19T10:00:00+02:00",
+  "status": "OK",
+  "slika_provjerena": true
  },
  {
   "id": "zavarivanje",
   "promovira": "Aparati za zavarivanje",
   "ocekivano": "aparati-za-zavarivanje",
   "odluka": "search",
-  "prije_url": "https://profioprema.com.hr/aparat-za-varenje-krovne-folije-za-radionicu-8-dijelova-1600-w-220-v-po-11637",
+  "prije_url": "https://profioprema.com.hr/mig-aparat-za-zavarivanje-za-radionicu-200-a-po-11591",
   "kandidati": [
-   {
-    "type": "category",
-    "url": "https://profioprema.com.hr/aparati-za-zavarivanje",
-    "status": 200,
-    "total": 88,
-    "sampled": 88,
-    "relevant": 27,
-    "share": 0.31,
-    "variants": 18
-   },
    {
     "type": "search",
     "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=aparat+za+zavarivanje",
     "status": 200,
     "total": 29,
     "sampled": 29,
-    "relevant": 24,
-    "share": 0.83,
-    "variants": 17
+    "relevant": 23,
+    "share": 0.79,
+    "variants": 16
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/aparati-za-zavarivanje",
+    "status": 200,
+    "total": 88,
+    "sampled": 88,
+    "relevant": 18,
+    "share": 0.2,
+    "variants": 12
    },
    {
     "type": "category",
@@ -672,19 +631,9 @@
     "status": 200,
     "total": 1703,
     "sampled": 100,
-    "relevant": 15,
-    "share": 0.15,
-    "variants": 10
-   },
-   {
-    "type": "search",
-    "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=aparat+za+varenje",
-    "status": 200,
-    "total": 9,
-    "sampled": 9,
-    "relevant": 9,
-    "share": 1.0,
-    "variants": 6
+    "relevant": 7,
+    "share": 0.07,
+    "variants": 5
    },
    {
     "type": "category",
@@ -692,32 +641,43 @@
     "status": 200,
     "total": 125,
     "sampled": 100,
-    "relevant": 6,
-    "share": 0.06,
-    "variants": 5
+    "relevant": 5,
+    "share": 0.05,
+    "variants": 4
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/auto-oprema-i-radionice",
+    "status": 200,
+    "total": 1267,
+    "sampled": 100,
+    "relevant": 5,
+    "share": 0.05,
+    "variants": 4
    }
   ],
-  "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=aparat+za+varenje",
+  "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=MIG+aparat",
   "http": 200,
-  "h1": "Traži - aparat za varenje",
-  "ukupno": 9,
-  "relevantnih": "9/9",
+  "h1": "Traži - MIG aparat",
+  "ukupno": 5,
+  "relevantnih": "5/5",
   "udio": 1.0,
-  "varijanti": 6,
+  "varijanti": 3,
   "mobilno": {
    "status": 200,
    "viewport": true,
-   "products": 9,
+   "products": 5,
    "ok": true
   },
   "slika": "media/po/story-zavarivanje.jpg",
   "proizvod_na_slici": {
-   "product": "Aparat za varenje krovne folije za radionicu, 8 dijelova, 1600 W, 220 V",
-   "product_url": "https://profioprema.com.hr/aparat-za-varenje-krovne-folije-za-radionicu-8-dijelova-1600-w-220-v-po-11637",
-   "src": "https://profioprema.com.hr/image/catalog/profi/90/aparat-za-zavarivanje-1600-w-220-v-90b7af-0.jpg"
+   "product": "MIG aparat za zavarivanje za radionicu, 200 A",
+   "product_url": "https://profioprema.com.hr/mig-aparat-za-zavarivanje-za-radionicu-200-a-po-11591",
+   "src": "https://profioprema.com.hr/image/catalog/profi/74/aparat-za-zavarivanje-520-x-295-x-410-mm-749787-0.jpg"
   },
-  "when": "2026-10-21T10:00:00+02:00",
-  "status": "OK"
+  "when": "2026-10-20T10:00:00+02:00",
+  "status": "OK",
+  "slika_provjerena": false
  },
  {
   "id": "vitla",
@@ -796,8 +756,9 @@
    "product_url": "https://profioprema.com.hr/vitla-i-cekrci/rucno-vitlo-za-prikolicu-camca-1588-kg-dvije-brzine-remen-6-1-m-dvosmjerna-racna-po-24051",
    "src": "https://profioprema.com.hr/image/catalog/profi/a3/rucno-vitlo-za-prikolicu-camca-a33267-0.jpg"
   },
-  "when": "2026-10-22T10:00:00+02:00",
-  "status": "OK"
+  "when": "2026-10-21T10:00:00+02:00",
+  "status": "OK",
+  "slika_provjerena": false
  },
  {
   "id": "invalidska-kolica",
@@ -876,8 +837,9 @@
    "product_url": "https://profioprema.com.hr/invalidska-kolica-nosivost-100-kg-na-struju-na-po-23895",
    "src": "https://profioprema.com.hr/image/catalog/profi/38/invalidska-kolica-100-kg-381779-0.jpg"
   },
-  "when": "2026-10-23T10:00:00+02:00",
-  "status": "OK"
+  "when": "2026-10-22T10:00:00+02:00",
+  "status": "OK",
+  "slika_provjerena": false
  },
  {
   "id": "hranilice",
@@ -959,8 +921,9 @@
    "product_url": "https://profioprema.com.hr/automatska-hranilica-za-kokosi-za-vrt-nosivost-11-kg-pocincano-sa-zakljucavanjem-po-19270",
    "src": "https://profioprema.com.hr/image/catalog/profi/13/oprema-za-domace-zivotinje-od-pocincanog-celik-132621-0.jpg"
   },
-  "when": "2026-10-24T10:00:00+02:00",
-  "status": "OK"
+  "when": "2026-10-23T10:00:00+02:00",
+  "status": "OK",
+  "slika_provjerena": false
  },
  {
   "id": "indikatori-matica",
