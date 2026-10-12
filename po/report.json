@@ -1,0 +1,997 @@
+[
+ {
+  "id": "krovni",
+  "promovira": "Krovni nosači i krovne kutije",
+  "ocekivano": "krovni-nosaci-i-kutije",
+  "odluka": "category",
+  "prije_url": "https://profioprema.com.hr/alat-zavarivanje-i-radionica/aparat-za-varenje-krovne-folije-za-radionicu-8-dijelova-1600-w-220-v-po-11637",
+  "kandidati": [
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/krovni-nosaci-i-kutije",
+    "status": 200,
+    "total": 9156,
+    "sampled": 100,
+    "relevant": 99,
+    "share": 0.99,
+    "variants": 99
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/nosaci-i-prikolice",
+    "status": 200,
+    "total": 238,
+    "sampled": 100,
+    "relevant": 42,
+    "share": 0.42,
+    "variants": 36
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/kamp",
+    "status": 200,
+    "total": 196,
+    "sampled": 100,
+    "relevant": 8,
+    "share": 0.08,
+    "variants": 8
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/materijali",
+    "status": 200,
+    "total": 379,
+    "sampled": 100,
+    "relevant": 7,
+    "share": 0.07,
+    "variants": 4
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/oprema-za-kampere",
+    "status": 200,
+    "total": 120,
+    "sampled": 100,
+    "relevant": 6,
+    "share": 0.06,
+    "variants": 5
+   }
+  ],
+  "url": "https://profioprema.com.hr/krovni-nosaci-i-kutije",
+  "http": 200,
+  "h1": "Krovni nosači i kutije",
+  "ukupno": 9156,
+  "relevantnih": "99/100",
+  "udio": 0.99,
+  "varijanti": 99,
+  "mobilno": {
+   "status": 200,
+   "viewport": true,
+   "products": 24,
+   "ok": true
+  },
+  "slika": "media/po/story-krovni.jpg",
+  "proizvod_na_slici": {
+   "product": "Krovna kutija Mamooth za prijevoz prtljage na krovu vozila",
+   "product_url": "https://profioprema.com.hr/krovna-kutija-mamooth-460-lit-crna/krovni-nosaci-i-kutije",
+   "src": "https://profioprema.com.hr/image/catalog/nosaci/Boks-dachowy-MAMMOOTH-ADAMANTIS-460BL-do-75kg-460L.jpeg"
+  },
+  "when": "2026-10-13T10:00:00+02:00",
+  "status": "OK"
+ },
+ {
+  "id": "zimske-gume",
+  "promovira": "Zimske gume",
+  "ocekivano": "zimske-gume",
+  "odluka": "category",
+  "prije_url": "https://profioprema.com.hr/285-35-r21-105y-michelin-super-sport-ljetna-guma",
+  "kandidati": [
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/cjelogodisnje-gume",
+    "status": 200,
+    "total": 1942,
+    "sampled": 106,
+    "relevant": 106,
+    "share": 1.0,
+    "variants": 47
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/gume",
+    "status": 200,
+    "total": 7553,
+    "sampled": 106,
+    "relevant": 106,
+    "share": 1.0,
+    "variants": 37
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/ljetne-gume",
+    "status": 200,
+    "total": 3696,
+    "sampled": 106,
+    "relevant": 106,
+    "share": 1.0,
+    "variants": 50
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/zimske-gume",
+    "status": 200,
+    "total": 1856,
+    "sampled": 106,
+    "relevant": 106,
+    "share": 1.0,
+    "variants": 35
+   }
+  ],
+  "url": "https://profioprema.com.hr/cjelogodisnje-gume",
+  "http": 200,
+  "h1": "Cjelogodišnje gume",
+  "ukupno": 1942,
+  "relevantnih": "106/106",
+  "udio": 1.0,
+  "varijanti": 47,
+  "mobilno": {
+   "status": 200,
+   "viewport": true,
+   "products": 30,
+   "ok": true
+  },
+  "slika": "media/po/story-zimske-gume.jpg",
+  "proizvod_na_slici": null,
+  "when": "2026-10-14T10:00:00+02:00",
+  "status": "OK"
+ },
+ {
+  "id": "hidraulicne-prese",
+  "promovira": "Hidraulične preše za radionicu",
+  "ocekivano": [
+   "hidraulična preša"
+  ],
+  "odluka": "search",
+  "prije_url": "https://profioprema.com.hr/obrada-metala/hidraulicna-presa-za-radionicu-81-26-22-cm-po-10627",
+  "kandidati": [
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/alat",
+    "status": 200,
+    "total": 82,
+    "sampled": 82,
+    "relevant": 16,
+    "share": 0.2,
+    "variants": 16
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/vodoinstalacije-i-pumpe-alat",
+    "status": 200,
+    "total": 155,
+    "sampled": 100,
+    "relevant": 16,
+    "share": 0.16,
+    "variants": 13
+   },
+   {
+    "type": "search",
+    "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=hidrauli%C4%8Dna+pre%C5%A1a",
+    "status": 200,
+    "total": 15,
+    "sampled": 15,
+    "relevant": 15,
+    "share": 1.0,
+    "variants": 15
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/obrada-metala",
+    "status": 200,
+    "total": 173,
+    "sampled": 100,
+    "relevant": 13,
+    "share": 0.13,
+    "variants": 13
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/kreativni-rad",
+    "status": 200,
+    "total": 320,
+    "sampled": 100,
+    "relevant": 11,
+    "share": 0.11,
+    "variants": 5
+   }
+  ],
+  "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=hidrauli%C4%8Dna+pre%C5%A1a",
+  "http": 200,
+  "h1": "Traži - hidraulična preša",
+  "ukupno": 15,
+  "relevantnih": "15/15",
+  "udio": 1.0,
+  "varijanti": 15,
+  "mobilno": {
+   "status": 200,
+   "viewport": true,
+   "products": 15,
+   "ok": true
+  },
+  "slika": "media/po/story-hidraulicne-prese.jpg",
+  "proizvod_na_slici": {
+   "product": "Hidraulična preša za prešanje i savijanje metala, 10 t, s pločama za savijanje",
+   "product_url": "https://profioprema.com.hr/hidraulicna-presa-za-radionicu-81-26-22-cm-po-10627",
+   "src": "https://profioprema.com.hr/image/catalog/profi/47/stroj-za-obradu-metala-s-hidraulickim-pogonom-47b618-0.jpg"
+  },
+  "when": "2026-10-15T10:00:00+02:00",
+  "status": "OK"
+ },
+ {
+  "id": "kompresori",
+  "promovira": "Kompresori",
+  "ocekivano": "kompresori",
+  "odluka": "search",
+  "prije_url": "https://profioprema.com.hr/kompresori/kompresor-za-radionicu-12-v-7-bar-2-po-12050",
+  "kandidati": [
+   {
+    "type": "search",
+    "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=kompresor",
+    "status": 200,
+    "total": 81,
+    "sampled": 81,
+    "relevant": 77,
+    "share": 0.95,
+    "variants": 64
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/oprema-za-kampere",
+    "status": 200,
+    "total": 120,
+    "sampled": 100,
+    "relevant": 45,
+    "share": 0.45,
+    "variants": 37
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/auto-oprema-i-radionice",
+    "status": 200,
+    "total": 1267,
+    "sampled": 100,
+    "relevant": 22,
+    "share": 0.22,
+    "variants": 22
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/kompresori",
+    "status": 200,
+    "total": 36,
+    "sampled": 36,
+    "relevant": 20,
+    "share": 0.56,
+    "variants": 16
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/dijagnostika-i-punjaci",
+    "status": 200,
+    "total": 19,
+    "sampled": 19,
+    "relevant": 4,
+    "share": 0.21,
+    "variants": 3
+   }
+  ],
+  "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=kompresor",
+  "http": 200,
+  "h1": "Traži - kompresor",
+  "ukupno": 81,
+  "relevantnih": "77/81",
+  "udio": 0.95,
+  "varijanti": 64,
+  "mobilno": {
+   "status": 200,
+   "viewport": true,
+   "products": 24,
+   "ok": true
+  },
+  "slika": "media/po/story-kompresori.jpg",
+  "proizvod_na_slici": {
+   "product": "Aerator za ribnjak, kompresor 590 W, 147 l/min, za ribnjake do 1,2 ha, bez difuzora i crijeva",
+   "product_url": "https://profioprema.com.hr/aerator-za-ribnjak-kompresor-590-w-147-l-min-za-ribnjake-do-1-2-ha-bez-difuzora-i-cri-po-25073",
+   "src": "https://profioprema.com.hr/image/catalog/profi/fc/aerator-za-ribnjak-kompresor-5-fc3302-0.jpg"
+  },
+  "when": "2026-10-16T10:00:00+02:00",
+  "status": "OK"
+ },
+ {
+  "id": "dizalice",
+  "promovira": "Auto dizalice",
+  "ocekivano": "dizalice",
+  "odluka": "category",
+  "prije_url": "https://profioprema.com.hr/auto-oprema-i-radionice/adapter-za-podizanje-mjenjaca-na-podnu-dizalicu-500-kg-zakretanje-360-nagib-30-po-24168",
+  "kandidati": [
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/dizalice",
+    "status": 200,
+    "total": 127,
+    "sampled": 100,
+    "relevant": 97,
+    "share": 0.97,
+    "variants": 54
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/vitla-i-cekrci",
+    "status": 200,
+    "total": 100,
+    "sampled": 100,
+    "relevant": 38,
+    "share": 0.38,
+    "variants": 31
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/skladistenje-i-garaza",
+    "status": 200,
+    "total": 750,
+    "sampled": 100,
+    "relevant": 17,
+    "share": 0.17,
+    "variants": 15
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/transport-tereta",
+    "status": 200,
+    "total": 306,
+    "sampled": 100,
+    "relevant": 17,
+    "share": 0.17,
+    "variants": 15
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/rampe-i-stalci",
+    "status": 200,
+    "total": 45,
+    "sampled": 45,
+    "relevant": 8,
+    "share": 0.18,
+    "variants": 6
+   }
+  ],
+  "url": "https://profioprema.com.hr/dizalice",
+  "http": 200,
+  "h1": "Dizalice",
+  "ukupno": 127,
+  "relevantnih": "97/100",
+  "udio": 0.97,
+  "varijanti": 54,
+  "mobilno": {
+   "status": 200,
+   "viewport": true,
+   "products": 24,
+   "ok": true
+  },
+  "slika": "media/po/story-dizalice.jpg",
+  "proizvod_na_slici": {
+   "product": "Niska podna dizalica (kriko) za podizanje vozila s niskim podvozjem, na izvlačenje, nosivost 454 kg",
+   "product_url": "https://profioprema.com.hr/dizalice/niska-podna-dizalica-za-autoservis-na-izvlacenje-nosivost-454-kg-po-12177",
+   "src": "https://profioprema.com.hr/image/catalog/profi/98/dizalica-za-vozilo-453-6-kg-0-5-t-64-cm-98e7e9-0.jpg"
+  },
+  "when": "2026-10-17T10:00:00+02:00",
+  "status": "OK"
+ },
+ {
+  "id": "grijalice",
+  "promovira": "Grijalice za radionicu i gradilište",
+  "ocekivano": "grijalice",
+  "odluka": "category",
+  "prije_url": "https://profioprema.com.hr/vanjsko-grijanje/viseca-infracrvena-grijalica-za-terasu-i-nadstresnicu-2000-w-daljinski-upravljac-ip34-po-25404",
+  "kandidati": [
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/grijalice",
+    "status": 200,
+    "total": 60,
+    "sampled": 60,
+    "relevant": 56,
+    "share": 0.93,
+    "variants": 33
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/grijanje-i-ventilacija",
+    "status": 200,
+    "total": 337,
+    "sampled": 100,
+    "relevant": 39,
+    "share": 0.39,
+    "variants": 26
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/staklenici",
+    "status": 200,
+    "total": 52,
+    "sampled": 52,
+    "relevant": 3,
+    "share": 0.06,
+    "variants": 1
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/vanjsko-grijanje",
+    "status": 200,
+    "total": 15,
+    "sampled": 15,
+    "relevant": 1,
+    "share": 0.07,
+    "variants": 1
+   }
+  ],
+  "url": "https://profioprema.com.hr/grijalice",
+  "http": 200,
+  "h1": "Grijalice",
+  "ukupno": 60,
+  "relevantnih": "56/60",
+  "udio": 0.93,
+  "varijanti": 33,
+  "mobilno": {
+   "status": 200,
+   "viewport": true,
+   "products": 24,
+   "ok": true
+  },
+  "slika": "media/po/story-grijalice.jpg",
+  "proizvod_na_slici": {
+   "product": "Dizelska grijalica za grijanje zraka u kamperima i kamionima, 8 kW (3)",
+   "product_url": "https://profioprema.com.hr/grijalice/dizelska-grijalica-8-kw-48-20-49-cm-po-15674",
+   "src": "https://profioprema.com.hr/image/catalog/profi/c5/dizelska-grijalica-s-dizelskim-motorom-s-dalji-c5b6ca-0.jpg"
+  },
+  "when": "2026-10-18T10:00:00+02:00",
+  "status": "OK"
+ },
+ {
+  "id": "kamini",
+  "promovira": "Kamini",
+  "ocekivano": "kamini",
+  "odluka": "manual",
+  "prije_url": "https://profioprema.com.hr/vanjsko-grijanje/vanjski-kamin-s-dimnjakom-od-aluminija-po-14394",
+  "kandidati": [
+   {
+    "type": "search",
+    "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=kamin",
+    "status": 200,
+    "total": 37,
+    "sampled": 37,
+    "relevant": 10,
+    "share": 0.27,
+    "variants": 10
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/grijanje-i-ventilacija",
+    "status": 200,
+    "total": 337,
+    "sampled": 100,
+    "relevant": 5,
+    "share": 0.05,
+    "variants": 5
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/kamini",
+    "status": 200,
+    "total": 79,
+    "sampled": 79,
+    "relevant": 5,
+    "share": 0.06,
+    "variants": 5
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/vanjsko-grijanje",
+    "status": 200,
+    "total": 15,
+    "sampled": 15,
+    "relevant": 4,
+    "share": 0.27,
+    "variants": 4
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/kucanstvo-i-dekor",
+    "status": 200,
+    "total": 1084,
+    "sampled": 100,
+    "relevant": 1,
+    "share": 0.01,
+    "variants": 1
+   }
+  ],
+  "url": null,
+  "status": "RUČNA PROVJERA",
+  "razlog": "najbliže: https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=kamin — 10/37 relevantnih (27 %), potrebno ≥3 i ≥60 %"
+ },
+ {
+  "id": "regali",
+  "promovira": "Regali i police",
+  "ocekivano": "regali-i-police",
+  "odluka": "category",
+  "prije_url": "https://profioprema.com.hr/rucni-alat/sablona-za-busenje-polica-za-radionicu-od-aluminija-po-11334",
+  "kandidati": [
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/regali-i-police",
+    "status": 200,
+    "total": 153,
+    "sampled": 100,
+    "relevant": 67,
+    "share": 0.67,
+    "variants": 57
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/nehrdajuci-namjestaj",
+    "status": 200,
+    "total": 121,
+    "sampled": 100,
+    "relevant": 18,
+    "share": 0.18,
+    "variants": 15
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/praonica",
+    "status": 200,
+    "total": 79,
+    "sampled": 79,
+    "relevant": 13,
+    "share": 0.16,
+    "variants": 11
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/ured",
+    "status": 200,
+    "total": 82,
+    "sampled": 82,
+    "relevant": 13,
+    "share": 0.16,
+    "variants": 13
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/djecja-soba",
+    "status": 200,
+    "total": 94,
+    "sampled": 94,
+    "relevant": 12,
+    "share": 0.13,
+    "variants": 11
+   }
+  ],
+  "url": "https://profioprema.com.hr/regali-i-police",
+  "http": 200,
+  "h1": "Regali i police",
+  "ukupno": 153,
+  "relevantnih": "67/100",
+  "udio": 0.67,
+  "varijanti": 57,
+  "mobilno": {
+   "status": 200,
+   "viewport": true,
+   "products": 24,
+   "ok": true
+  },
+  "slika": "media/po/story-regali.jpg",
+  "proizvod_na_slici": {
+   "product": "Metalni regal s 4 žičane police na kotačima, 76,2 × 31,3 × 160 cm, bijeli",
+   "product_url": "https://profioprema.com.hr/regali-i-police/metalni-regal-s-4-zicane-police-na-kotacima-76-2-x-31-3-x-160-cm-bijeli-po-25236",
+   "src": "https://profioprema.com.hr/image/catalog/profi/9e/metalni-regal-s-4-zicane-polic-9eb355-0.jpg"
+  },
+  "when": "2026-10-19T10:00:00+02:00",
+  "status": "OK"
+ },
+ {
+  "id": "ledomati",
+  "promovira": "Profesionalni ledomati",
+  "ocekivano": "ledomati",
+  "odluka": "category",
+  "prije_url": "https://profioprema.com.hr/ledomati/glava-ledomata-250-kg-24-h-bez-spremnika-za-led-nehrdajuci-celik-s-programiranjem-i-s-po-24029",
+  "kandidati": [
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/ledomati",
+    "status": 200,
+    "total": 51,
+    "sampled": 51,
+    "relevant": 48,
+    "share": 0.94,
+    "variants": 41
+   }
+  ],
+  "url": "https://profioprema.com.hr/ledomati",
+  "http": 200,
+  "h1": "Ledomati",
+  "ukupno": 51,
+  "relevantnih": "48/51",
+  "udio": 0.94,
+  "varijanti": 41,
+  "mobilno": {
+   "status": 200,
+   "viewport": true,
+   "products": 24,
+   "ok": true
+  },
+  "slika": "media/po/story-ledomati.jpg",
+  "proizvod_na_slici": {
+   "product": "Profesionalni ledomat za led u kockama, 136 kg/24 h, samo uređaj, samočišćenje",
+   "product_url": "https://profioprema.com.hr/ledomati/profesionalni-ledomat-za-ugostiteljstvo-66-64-74-cm-po-17376",
+   "src": "https://profioprema.com.hr/image/catalog/profi/74/profesionalni-ledomat-sa-samociscenjem-136-1-k-7401a4-0.jpg"
+  },
+  "when": "2026-10-20T10:00:00+02:00",
+  "status": "OK"
+ },
+ {
+  "id": "zavarivanje",
+  "promovira": "Aparati za zavarivanje",
+  "ocekivano": "aparati-za-zavarivanje",
+  "odluka": "manual",
+  "prije_url": "https://profioprema.com.hr/aparati-za-zavarivanje/mig-aparat-za-zavarivanje-za-radionicu-200-a-po-11591",
+  "kandidati": [
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/aparati-za-zavarivanje",
+    "status": 200,
+    "total": 88,
+    "sampled": 88,
+    "relevant": 12,
+    "share": 0.14,
+    "variants": 9
+   },
+   {
+    "type": "search",
+    "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=aparat+za+zavarivanje",
+    "status": 200,
+    "total": 29,
+    "sampled": 29,
+    "relevant": 12,
+    "share": 0.41,
+    "variants": 9
+   }
+  ],
+  "url": null,
+  "status": "RUČNA PROVJERA",
+  "razlog": "najbliže: https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=aparat+za+zavarivanje — 12/29 relevantnih (41 %), potrebno ≥3 i ≥60 %"
+ },
+ {
+  "id": "vitla",
+  "promovira": "Vitla",
+  "ocekivano": "vitla-i-cekrci",
+  "odluka": "category",
+  "prije_url": "https://profioprema.com.hr/alat-zavarivanje-i-radionica/brusilica-sa-savitljivom-osovinom-za-radionicu-31-dio-1000-w-30000-o-min-po-10157",
+  "kandidati": [
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/vitla-i-cekrci",
+    "status": 200,
+    "total": 100,
+    "sampled": 100,
+    "relevant": 60,
+    "share": 0.6,
+    "variants": 47
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/aparati-za-zavarivanje",
+    "status": 200,
+    "total": 88,
+    "sampled": 88,
+    "relevant": 6,
+    "share": 0.07,
+    "variants": 5
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/okov-i-vezivanje",
+    "status": 200,
+    "total": 55,
+    "sampled": 55,
+    "relevant": 6,
+    "share": 0.11,
+    "variants": 4
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/kamini",
+    "status": 200,
+    "total": 79,
+    "sampled": 79,
+    "relevant": 4,
+    "share": 0.05,
+    "variants": 4
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/alat-zavarivanje-i-radionica",
+    "status": 200,
+    "total": 1703,
+    "sampled": 100,
+    "relevant": 3,
+    "share": 0.03,
+    "variants": 3
+   }
+  ],
+  "url": "https://profioprema.com.hr/vitla-i-cekrci",
+  "http": 200,
+  "h1": "Vitla i čekrci",
+  "ukupno": 100,
+  "relevantnih": "60/100",
+  "udio": 0.6,
+  "varijanti": 47,
+  "mobilno": {
+   "status": 200,
+   "viewport": true,
+   "products": 24,
+   "ok": true
+  },
+  "slika": "media/po/story-vitla.jpg",
+  "proizvod_na_slici": {
+   "product": "Električno sidreno vitlo za brodove, 1100 W, 12 V, od nehrđajućeg čelika",
+   "product_url": "https://profioprema.com.hr/vitla-i-cekrci/elektricno-vitlo-za-autoservis-1100-w-12-v-od-nehrdajuceg-celika-po-13375",
+   "src": "https://profioprema.com.hr/image/catalog/profi/67/vitlo-od-nehrdajuceg-celika-12-v-600-w-6-35-mm-67e48f-0.jpg"
+  },
+  "when": "2026-10-21T10:00:00+02:00",
+  "status": "OK"
+ },
+ {
+  "id": "invalidska-kolica",
+  "promovira": "Invalidska kolica",
+  "ocekivano": "invalidska-kolica",
+  "odluka": "category",
+  "prije_url": "https://profioprema.com.hr/aparati-za-zavarivanje/kolica-za-aparat-za-zavarivanje-za-radionicu-2-ladice-sa-zakljucavanjem-po-11625",
+  "kandidati": [
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/transport-tereta",
+    "status": 200,
+    "total": 306,
+    "sampled": 100,
+    "relevant": 60,
+    "share": 0.6,
+    "variants": 47
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/vrtna-kolica",
+    "status": 200,
+    "total": 60,
+    "sampled": 60,
+    "relevant": 56,
+    "share": 0.93,
+    "variants": 42
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/ulje-i-tekucine",
+    "status": 200,
+    "total": 91,
+    "sampled": 91,
+    "relevant": 29,
+    "share": 0.32,
+    "variants": 14
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/skladistenje-i-garaza",
+    "status": 200,
+    "total": 750,
+    "sampled": 100,
+    "relevant": 28,
+    "share": 0.28,
+    "variants": 26
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/psi",
+    "status": 200,
+    "total": 143,
+    "sampled": 100,
+    "relevant": 20,
+    "share": 0.2,
+    "variants": 10
+   }
+  ],
+  "url": "https://profioprema.com.hr/vrtna-kolica",
+  "http": 200,
+  "h1": "Vrtna kolica",
+  "ukupno": 60,
+  "relevantnih": "56/60",
+  "udio": 0.93,
+  "varijanti": 42,
+  "mobilno": {
+   "status": 200,
+   "viewport": true,
+   "products": 24,
+   "ok": true
+  },
+  "slika": "media/po/story-invalidska-kolica.jpg",
+  "proizvod_na_slici": {
+   "product": "Kolica za plažu za vrt, nosivost 75 kg, kotači 25 cm, puni, termo torba, držač suncobrana",
+   "product_url": "https://profioprema.com.hr/vrtna-kolica/kolica-za-plazu-za-vrt-nosivost-75-kg-86-45-19-cm-po-19954",
+   "src": "https://profioprema.com.hr/image/catalog/profi/7c/vrtna-kolica-75-kg-250-mm-7c874f-0.jpg"
+  },
+  "when": "2026-10-22T10:00:00+02:00",
+  "status": "OK"
+ },
+ {
+  "id": "hranilice",
+  "promovira": "Hranilice i pojilice za perad",
+  "ocekivano": [
+   "hranilica",
+   "pojilica"
+  ],
+  "odluka": "search",
+  "prije_url": "https://profioprema.com.hr/poljoprivreda/automatska-hranilica-za-kokosi-za-vrt-nosivost-11-kg-pocincano-sa-zakljucavanjem-po-19270",
+  "kandidati": [
+   {
+    "type": "search",
+    "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=hranilica",
+    "status": 200,
+    "total": 17,
+    "sampled": 17,
+    "relevant": 16,
+    "share": 0.94,
+    "variants": 16
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/poljoprivreda",
+    "status": 200,
+    "total": 230,
+    "sampled": 100,
+    "relevant": 9,
+    "share": 0.09,
+    "variants": 9
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/ljubimci",
+    "status": 200,
+    "total": 60,
+    "sampled": 60,
+    "relevant": 6,
+    "share": 0.1,
+    "variants": 6
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/vrt-i-vanjska-mehanizacija",
+    "status": 200,
+    "total": 1010,
+    "sampled": 100,
+    "relevant": 5,
+    "share": 0.05,
+    "variants": 5
+   },
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/psi",
+    "status": 200,
+    "total": 143,
+    "sampled": 100,
+    "relevant": 2,
+    "share": 0.02,
+    "variants": 2
+   }
+  ],
+  "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=hranilica",
+  "http": 200,
+  "h1": "Traži - hranilica",
+  "ukupno": 17,
+  "relevantnih": "16/17",
+  "udio": 0.94,
+  "varijanti": 16,
+  "mobilno": {
+   "status": 200,
+   "viewport": true,
+   "products": 17,
+   "ok": true
+  },
+  "slika": "media/po/story-hranilice.jpg",
+  "proizvod_na_slici": {
+   "product": "Automatska hranilica za kokoši za vrt, nosivost 11 kg, pocinčano, sa zaključavanjem",
+   "product_url": "https://profioprema.com.hr/automatska-hranilica-za-kokosi-za-vrt-nosivost-11-kg-pocincano-sa-zakljucavanjem-po-19270",
+   "src": "https://profioprema.com.hr/image/catalog/profi/13/oprema-za-domace-zivotinje-od-pocincanog-celik-132621-0.jpg"
+  },
+  "when": "2026-10-23T10:00:00+02:00",
+  "status": "OK"
+ },
+ {
+  "id": "indikatori-matica",
+  "promovira": "Indikatori matica kotača",
+  "ocekivano": [
+   "indikator matica",
+   "indikator matice"
+  ],
+  "odluka": "manual",
+  "prije_url": null,
+  "kandidati": [
+   {
+    "type": "search",
+    "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=indikator+matica",
+    "status": 200,
+    "total": 0,
+    "sampled": 0,
+    "relevant": 0,
+    "share": 0.0,
+    "variants": 0
+   },
+   {
+    "type": "search",
+    "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=indikator+matice",
+    "status": 200,
+    "total": 0,
+    "sampled": 0,
+    "relevant": 0,
+    "share": 0.0,
+    "variants": 0
+   }
+  ],
+  "url": null,
+  "status": "RUČNA PROVJERA",
+  "razlog": "najbliže: https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=indikator+matica — 0/0 relevantnih (0 %), potrebno ≥3 i ≥60 %"
+ },
+ {
+  "id": "alu-felge",
+  "promovira": "Aluminijske felge",
+  "ocekivano": [
+   "aluminijske felge",
+   "alu felge"
+  ],
+  "odluka": "manual",
+  "prije_url": "https://profioprema.com.hr/oprema-za-gume/montazna-glava-za-rucni-montirac-guma-za-felge-16-21-s-konusom-za-centriranje-po-25415",
+  "kandidati": [
+   {
+    "type": "category",
+    "url": "https://profioprema.com.hr/oprema-za-gume",
+    "status": 200,
+    "total": 52,
+    "sampled": 52,
+    "relevant": 1,
+    "share": 0.02,
+    "variants": 1
+   },
+   {
+    "type": "search",
+    "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=aluminijske+felge",
+    "status": 200,
+    "total": 0,
+    "sampled": 0,
+    "relevant": 0,
+    "share": 0.0,
+    "variants": 0
+   },
+   {
+    "type": "search",
+    "url": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=alu+felge",
+    "status": 200,
+    "total": 0,
+    "sampled": 0,
+    "relevant": 0,
+    "share": 0.0,
+    "variants": 0
+   }
+  ],
+  "url": null,
+  "status": "RUČNA PROVJERA",
+  "razlog": "najbliže: https://profioprema.com.hr/oprema-za-gume — 1/52 relevantnih (2 %), potrebno ≥3 i ≥60 %"
+ }
+]
