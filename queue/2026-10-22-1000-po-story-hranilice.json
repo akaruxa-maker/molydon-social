@@ -1,0 +1,15 @@
+{
+  "id": "2026-10-22-1000-po-story-hranilice",
+  "approved": false,
+  "when": "2026-10-22T10:00:00+02:00",
+  "targets": [
+    "fb:profioprema"
+  ],
+  "type": "story",
+  "media": [
+    "media/po/story-hranilice.jpg"
+  ],
+  "caption": "",
+  "link": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=hranilica",
+  "_napomena": "FB story API ne podržava link; adresa odredišta je ispisana na slici."
+}

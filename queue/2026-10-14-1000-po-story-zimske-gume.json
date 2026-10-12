@@ -1,0 +1,15 @@
+{
+  "id": "2026-10-14-1000-po-story-zimske-gume",
+  "approved": false,
+  "when": "2026-10-14T10:00:00+02:00",
+  "targets": [
+    "fb:profioprema"
+  ],
+  "type": "story",
+  "media": [
+    "media/po/story-zimske-gume.jpg"
+  ],
+  "caption": "",
+  "link": "https://profioprema.com.hr/zimske-gume",
+  "_napomena": "FB story API ne podržava link; adresa odredišta je ispisana na slici."
+}

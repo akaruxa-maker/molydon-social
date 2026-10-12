@@ -29,7 +29,7 @@
      55
     ]
    ],
-   "image_checked": false
+   "image_checked": true
   },
   {
    "id": "zimske-gume",
@@ -120,7 +120,7 @@
      70
     ]
    ],
-   "image_checked": false
+   "image_checked": true
   },
   {
    "id": "grijalice",
@@ -154,7 +154,7 @@
      30
     ]
    ],
-   "image_checked": false
+   "image_checked": true
   },
   {
    "id": "kamini",
@@ -278,7 +278,7 @@
      50
     ]
    ],
-   "image_checked": false
+   "image_checked": true
   },
   {
    "id": "invalidska-kolica",
@@ -307,7 +307,7 @@
      50
     ]
    ],
-   "image_checked": false
+   "image_checked": true
   },
   {
    "id": "hranilice",
@@ -335,7 +335,7 @@
      40
     ]
    ],
-   "image_checked": false
+   "image_checked": true
   },
   {
    "id": "indikatori-matica",

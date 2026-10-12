@@ -1,0 +1,15 @@
+{
+  "id": "2026-10-16-1000-po-story-dizalice",
+  "approved": false,
+  "when": "2026-10-16T10:00:00+02:00",
+  "targets": [
+    "fb:profioprema"
+  ],
+  "type": "story",
+  "media": [
+    "media/po/story-dizalice.jpg"
+  ],
+  "caption": "",
+  "link": "https://profioprema.com.hr/dizalice",
+  "_napomena": "FB story API ne podržava link; adresa odredišta je ispisana na slici."
+}

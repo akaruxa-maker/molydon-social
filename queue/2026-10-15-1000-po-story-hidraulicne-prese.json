@@ -1,0 +1,15 @@
+{
+  "id": "2026-10-15-1000-po-story-hidraulicne-prese",
+  "approved": false,
+  "when": "2026-10-15T10:00:00+02:00",
+  "targets": [
+    "fb:profioprema"
+  ],
+  "type": "story",
+  "media": [
+    "media/po/story-hidraulicne-prese.jpg"
+  ],
+  "caption": "",
+  "link": "https://profioprema.com.hr/index.php?route=product%2Fsearch&language=hr-hr&search=hidrauli%C4%8Dna+pre%C5%A1a",
+  "_napomena": "FB story API ne podržava link; adresa odredišta je ispisana na slici."
+}
