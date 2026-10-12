@@ -325,7 +325,7 @@ def main():
 
     # 1) Zakazane FB objave koje jos nisu izasle: ako je stavka u queue/
     #    promijenjena, maknuta ili joj je povuceno odobrenje -> obrisi i (re)procesiraj.
-    for sf in sorted(state_dir.glob("*.json")):
+    for sf in sorted(state_dir.glob("[0-9]*.json")):
         st = json.loads(sf.read_text())
         if not st.get("scheduled_for"):
             continue
