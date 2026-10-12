@@ -78,14 +78,14 @@
   },
   "when": "2026-10-13T10:00:00+02:00",
   "status": "OK",
-  "slika_provjerena": false
+  "slika_provjerena": true
  },
  {
   "id": "zimske-gume",
   "promovira": "Zimske gume",
   "ocekivano": "zimske-gume",
   "odluka": "category",
-  "prije_url": "https://profioprema.com.hr/315-30-r22-107y-michelin-ps4-s-n0-ljetna-guma",
+  "prije_url": "https://profioprema.com.hr/255-45-r18-103y-ps5-michelin",
   "kandidati": [
    {
     "type": "category",
@@ -95,7 +95,7 @@
     "sampled": 106,
     "relevant": 106,
     "share": 1.0,
-    "variants": 47
+    "variants": 46
    },
    {
     "type": "category",
@@ -341,7 +341,7 @@
   },
   "when": "2026-10-16T10:00:00+02:00",
   "status": "OK",
-  "slika_provjerena": false
+  "slika_provjerena": true
  },
  {
   "id": "grijalice",
@@ -412,7 +412,7 @@
   },
   "when": "2026-10-17T10:00:00+02:00",
   "status": "OK",
-  "slika_provjerena": false
+  "slika_provjerena": true
  },
  {
   "id": "kamini",
@@ -758,7 +758,7 @@
   },
   "when": "2026-10-21T10:00:00+02:00",
   "status": "OK",
-  "slika_provjerena": false
+  "slika_provjerena": true
  },
  {
   "id": "invalidska-kolica",
@@ -839,7 +839,7 @@
   },
   "when": "2026-10-22T10:00:00+02:00",
   "status": "OK",
-  "slika_provjerena": false
+  "slika_provjerena": true
  },
  {
   "id": "hranilice",
@@ -923,7 +923,7 @@
   },
   "when": "2026-10-23T10:00:00+02:00",
   "status": "OK",
-  "slika_provjerena": false
+  "slika_provjerena": true
  },
  {
   "id": "indikatori-matica",
