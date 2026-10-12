@@ -429,7 +429,7 @@ Na Molydonu je online katalog s više od 270.000 auto dijelova. Nema pogađanja 
 
 ✅ Originalni i zamjenski dijelovi
 ✅ Kočnice, filteri, ovjes, remeni, kvačilo, elektrika…
-✅ Dostava na području cijele Hrvatske već od 5,50 €
+✅ Dostava na području cijele Hrvatske već od 6,50 €
 ✅ Stručna pomoć ako zapne
 
 👉 {AD}
@@ -442,7 +442,7 @@ Za mehaničare i za one koji sami servisiraju auto. 🛠️
 photo_sale_post(OUT / "media/a02-kocnice.jpg", "brake",
                 [("Kočnice", WHITE), ("prije zime", YEL)],
                 ["Diskovi i pločice", "Kočione čeljusti", "Kočiona tekućina", "Za tvoj auto — po modelu i motoru"],
-                "5,50 €", "cijela Hrvatska", "DOSTAVA OD", bgopts={"darken_top": 0.85, "bright": 0.85})
+                "6,50 €", "cijela Hrvatska", "DOSTAVA OD", bgopts={"darken_top": 0.85, "bright": 0.85})
 post("2026-10-10-1800-a-kocnice-fb", "2026-10-10T18:00:00+02:00", ["fb:molydon"], "a02-kocnice.jpg", f"""
 🛑 KOČNICE PRIJE ZIME — PROVJERI DOK JE SUHO
 
@@ -459,7 +459,7 @@ Na mokroj i skliskoj cesti kočnice rade najteži posao. Znakovi da je vrijeme z
 ✅ Kočiona tekućina
 
 Samo odaberi marku, model i motor — i vidiš dijelove koji odgovaraju tvom autu. 🚗
-🚚 Dostava na području cijele Hrvatske već od 5,50 €
+🚚 Dostava na području cijele Hrvatske već od 6,50 €
 
 👉 {AD}
 
@@ -469,7 +469,7 @@ Samo odaberi marku, model i motor — i vidiš dijelove koji odgovaraju tvom aut
 photo_sale_post(OUT / "media/a03-servis.jpg", "oil",
                 [("Mali servis", WHITE), ("prije zime", YEL)],
                 ["Filter ulja i motorno ulje", "Filter zraka", "Filter kabine", "Filter goriva"],
-                "5,50 €", "cijela Hrvatska", "DOSTAVA OD", bgopts={"darken_top": 0.88, "bright": 0.85})
+                "6,50 €", "cijela Hrvatska", "DOSTAVA OD", bgopts={"darken_top": 0.88, "bright": 0.85})
 post("2026-10-12-1800-a-servis-fb", "2026-10-12T18:00:00+02:00", ["fb:molydon"], "a03-servis.jpg", f"""
 🛢️ MALI SERVIS PRIJE ZIME? SVE NA JEDNOM MJESTU
 
@@ -482,7 +482,7 @@ Hladni startovi najviše troše motor — zato je jesen najbolje vrijeme za svje
 ✅ Kompleti filtera za tvoj model
 
 🔎 Odaberi marku, model i motor — katalog prikazuje samo dijelove koji odgovaraju.
-🚚 Dostava na području cijele Hrvatske već od 5,50 €
+🚚 Dostava na području cijele Hrvatske već od 6,50 €
 
 👉 {AD}
 
@@ -494,7 +494,7 @@ Hladni startovi najviše troše motor — zato je jesen najbolje vrijeme za svje
 photo_sale_post(OUT / "media/a04-brisaci.jpg", "wiper",
                 [("Vidiš li cestu", WHITE), ("kad pada kiša?", YEL)],
                 ["Ostavljaju pruge ili škripe?", "Vrijeme je za nove metlice", "Po modelu tvog auta"],
-                "5,50 €", "cijela Hrvatska", "DOSTAVA OD", bgopts={"darken_top": 0.88, "bright": 0.9})
+                "6,50 €", "cijela Hrvatska", "DOSTAVA OD", bgopts={"darken_top": 0.88, "bright": 0.9})
 post("2026-10-13-1800-a-brisaci-fb", "2026-10-13T18:00:00+02:00", ["fb:molydon"], "a04-brisaci.jpg", f"""
 🌧️ VIDIŠ LI CESTU KAD PADA KIŠA?
 
@@ -510,7 +510,7 @@ Znakovi da je vrijeme za nove metlice:
 ✅ Brisači, pumpice i brizgaljke
 
 🔎 Odaberi marku, model i motor u katalogu i vidiš što odgovara.
-🚚 Dostava na području cijele Hrvatske već od 5,50 €
+🚚 Dostava na području cijele Hrvatske već od 6,50 €
 
 👉 {AD}
 

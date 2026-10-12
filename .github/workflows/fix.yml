@@ -1,0 +1,27 @@
+name: Popravak teksta
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "ID-jevi stavki (razmak)"
+        required: true
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Popravi tekst
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          GRAPH_VERSION: v25.0
+        run: python3 tools/fix_captions.py ${{ inputs.ids }}
+      - name: Spremi
+        if: always()
+        run: |
+          git config user.name "molydon-bot"; git config user.email "bot@users.noreply.github.com"
+          git add state/_popravak.json; git commit -m "popravak" || true; git pull --rebase -q || true; git push || true

@@ -33,7 +33,8 @@ jobs:
           MEDIA_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}
           GRAPH_VERSION: v25.0
         run: |
-          python3 publish.py ${{ inputs.dry_run && '--dry-run' || '' }}
+          set -o pipefail
+          python3 publish.py ${{ inputs.dry_run && '--dry-run' || '' }} 2>&1 | tee run.log || { cp run.log state/_greska.txt; exit 1; }
 
       - name: Zabilježi objavljeno
         if: always()
