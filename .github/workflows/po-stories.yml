@@ -1,0 +1,40 @@
+name: PO storyji (provjera)
+
+# Generira Profi Oprema storyje i provjerava odredišne URL-ove. NE objavljuje ništa.
+on:
+  push:
+    paths:
+      - "po/plan.json"
+      - "tools/po_stories.py"
+  workflow_dispatch:
+    inputs:
+      queue:
+        description: "Upiši stavke u queue/ (approved=false)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: po-stories
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - name: Generiraj i provjeri
+        run: python3 tools/po_stories.py ${{ inputs.queue && '--queue' || '' }} 2>&1 | tee po/run.log
+      - name: Spremi rezultat
+        if: always()
+        run: |
+          git config user.name "molydon-bot"; git config user.email "bot@users.noreply.github.com"
+          git add po/ media/po/ queue/ || true
+          git diff --staged --quiet || git commit -m "PO storyji: provjera $(date -u +%F\ %H:%M)"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

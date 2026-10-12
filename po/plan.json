@@ -1,0 +1,294 @@
+{
+ "_opis": "Plan Facebook storyja za Profi Oprema. Svaki story promovira SKUPINU proizvoda. Odredište određuje tools/po_stories.py (kategorija > filtrirani popis/tražilica > ručna provjera). Nikad URL pojedinačnog proizvoda.",
+ "start": "2026-10-13",
+ "time": "10:00",
+ "target": "fb:profioprema",
+ "stories": [
+  {
+   "id": "krovni",
+   "title": "Krovni nosači i krovne kutije",
+   "sub": "Nosači za veliki broj modela automobila",
+   "cta": "Pronađi nosač za svoje vozilo",
+   "category_hint": "krovni-nosaci-i-kutije",
+   "search": [
+    "krovni nosač"
+   ],
+   "match": [
+    "krovn"
+   ],
+   "image_match": [
+    "krovna kutija",
+    "krovn"
+   ],
+   "exclude": []
+  },
+  {
+   "id": "zimske-gume",
+   "title": "Zimske gume",
+   "sub": "Veliki izbor dimenzija",
+   "cta": "Pronađi svoju dimenziju",
+   "category_hint": "zimske-gume",
+   "search": [],
+   "match": [
+    "\\d{3}/\\d{2}\\s*Z?R\\s?\\d{2}"
+   ],
+   "image": "none",
+   "exclude": []
+  },
+  {
+   "id": "hidraulicne-prese",
+   "title": "Hidraulične preše za radionicu",
+   "sub": "Različite nosivosti i izvedbe",
+   "cta": "Pregledaj modele",
+   "category_hint": null,
+   "search": [
+    "hidraulična preša"
+   ],
+   "match": [
+    "hidrauli\\w* preš",
+    "preša"
+   ],
+   "image_match": [
+    "hidraulična preša"
+   ],
+   "exclude": [
+    "abkant",
+    "termopreš",
+    "grijana",
+    "french",
+    "krovni"
+   ]
+  },
+  {
+   "id": "kompresori",
+   "title": "Kompresori",
+   "sub": "Za radionicu, garažu i teren",
+   "cta": "Pregledaj modele",
+   "category_hint": "kompresori",
+   "search": [
+    "kompresor"
+   ],
+   "match": [
+    "kompresor"
+   ],
+   "image_match": [
+    "kompresor"
+   ],
+   "exclude": [
+    "za kompresor",
+    "zamjensk"
+   ]
+  },
+  {
+   "id": "dizalice",
+   "title": "Auto dizalice",
+   "sub": "Hidraulične, podne i pneumatske",
+   "cta": "Pregledaj modele",
+   "category_hint": "dizalice",
+   "search": [
+    "dizalica"
+   ],
+   "match": [
+    "dizalic"
+   ],
+   "image_match": [
+    "niska podna",
+    "dizalic"
+   ],
+   "exclude": []
+  },
+  {
+   "id": "grijalice",
+   "title": "Grijalice za radionicu i gradilište",
+   "sub": "Dizelske i električne izvedbe",
+   "cta": "Pogledaj ponudu",
+   "category_hint": "grijalice",
+   "search": [
+    "grijalica"
+   ],
+   "match": [
+    "grijalic"
+   ],
+   "image_match": [
+    "dizelska grijalica",
+    "grijalic"
+   ],
+   "exclude": []
+  },
+  {
+   "id": "kamini",
+   "title": "Kamini",
+   "sub": "Topli dom ove zime",
+   "cta": "Pogledaj ponudu",
+   "category_hint": "kamini",
+   "search": [
+    "kamin"
+   ],
+   "match": [
+    "kamin"
+   ],
+   "image_match": [
+    "kamin"
+   ],
+   "exclude": [
+    "za kamin",
+    "staklo",
+    "upaljač",
+    "set alata",
+    "stalak",
+    "set za"
+   ]
+  },
+  {
+   "id": "regali",
+   "title": "Regali i police",
+   "sub": "Za skladište, garažu i podrum",
+   "cta": "Pogledaj ponudu",
+   "category_hint": "regali-i-police",
+   "search": [
+    "regal"
+   ],
+   "match": [
+    "regal",
+    "polic"
+   ],
+   "image_match": [
+    "metalni regal",
+    "regal"
+   ],
+   "exclude": []
+  },
+  {
+   "id": "ledomati",
+   "title": "Profesionalni ledomati",
+   "sub": "Za kafiće, restorane i evente",
+   "cta": "Pregledaj modele",
+   "category_hint": "ledomati",
+   "search": [
+    "ledomat"
+   ],
+   "match": [
+    "ledomat"
+   ],
+   "image_match": [
+    "profesionalni ledomat"
+   ],
+   "exclude": []
+  },
+  {
+   "id": "zavarivanje",
+   "title": "Aparati za zavarivanje",
+   "sub": "MIG, TIG i elektrodni",
+   "cta": "Pregledaj modele",
+   "category_hint": "aparati-za-zavarivanje",
+   "search": [
+    "aparat za zavarivanje"
+   ],
+   "match": [
+    "aparat za zavarivanje",
+    "zavarivač",
+    "aparat za (mig|tig|mma)"
+   ],
+   "image_match": [
+    "aparat za zavarivanje"
+   ],
+   "exclude": [
+    "deka",
+    "kolica za",
+    "pištolj",
+    "maska"
+   ]
+  },
+  {
+   "id": "vitla",
+   "title": "Vitla",
+   "sub": "Za vozila, prikolice i radionicu",
+   "cta": "Pregledaj modele",
+   "category_hint": "vitla-i-cekrci",
+   "search": [
+    "vitlo"
+   ],
+   "match": [
+    "vitl"
+   ],
+   "image_match": [
+    "vitlo"
+   ],
+   "exclude": []
+  },
+  {
+   "id": "invalidska-kolica",
+   "title": "Invalidska kolica",
+   "sub": "Ručna i električna",
+   "cta": "Pogledaj ponudu",
+   "category_hint": "invalidska-kolica",
+   "search": [
+    "invalidska kolica"
+   ],
+   "match": [
+    "kolica"
+   ],
+   "image_match": [
+    "invalidska kolica"
+   ],
+   "exclude": [
+    "za invalidska kolica"
+   ]
+  },
+  {
+   "id": "hranilice",
+   "title": "Hranilice i pojilice za perad",
+   "sub": "Za kokošinjac i dvorište",
+   "cta": "Pogledaj ponudu",
+   "category_hint": null,
+   "search": [
+    "hranilica",
+    "pojilica"
+   ],
+   "match": [
+    "hranilic",
+    "pojilic"
+   ],
+   "image_match": [
+    "hranilica za kokoši"
+   ],
+   "exclude": []
+  },
+  {
+   "id": "indikatori-matica",
+   "title": "Indikatori matica kotača",
+   "sub": "Vidljivo labavljenje matice",
+   "cta": "Pogledaj ponudu",
+   "category_hint": null,
+   "search": [
+    "indikator matica",
+    "indikator matice"
+   ],
+   "match": [
+    "indikator"
+   ],
+   "image_match": [
+    "indikator"
+   ],
+   "exclude": []
+  },
+  {
+   "id": "alu-felge",
+   "title": "Aluminijske felge",
+   "sub": "Za ljeto i zimu",
+   "cta": "Pregledaj modele",
+   "category_hint": null,
+   "search": [
+    "aluminijske felge",
+    "alu felge"
+   ],
+   "match": [
+    "felg"
+   ],
+   "image_match": [
+    "felg"
+   ],
+   "exclude": []
+  }
+ ]
+}

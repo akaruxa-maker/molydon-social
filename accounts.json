@@ -10,5 +10,11 @@
     "page_name": "Molydon webshop auto dijelova",
     "token_env": "META_TOKEN",
     "_opis": "@molydon_webshop — ID se dohvaca iz povezane FB stranice"
+  },
+  "fb:profioprema": {
+    "page_id": "1395016500358432",
+    "page_name": "Profi Oprema",
+    "token_env": "META_TOKEN",
+    "_opis": "Profi Oprema FB stranica (storyji iz tools/po_stories.py)"
   }
 }
