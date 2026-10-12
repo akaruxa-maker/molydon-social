@@ -163,6 +163,19 @@ def ok(ev):
     return ev["status"] == 200 and ev["relevant"] >= MIN_ITEMS and ev["share"] >= MIN_REL
 
 
+def _toks(text):
+    t = text.lower().translate(str.maketrans("čćžšđ", "cczsd"))
+    return {w[:5] for w in re.findall(r"[a-z]{4,}", t)}
+
+
+def name_score(story, ev):
+    """Koliko se naziv kategorije/popisa poklapa s porukom storyja (0..1)."""
+    want = _toks(story["title"])
+    have = _toks(ev.get("h1", "") + " " + ev["url"].rstrip("/").split("/")[-1].replace("-", " ")
+                 + " " + ev.get("query", ""))
+    return round(len(want & have) / len(want), 2) if want else 0.0
+
+
 def is_product_url(u):
     return bool(re.search(r"-po-\d+$", urllib.parse.urlparse(u).path)) or "product_id=" in u
 
@@ -184,7 +197,10 @@ def resolve(story, cats, cat_info):
     if good:
         # najbolje odgovara poruci: najveći udio
         # relevantnih proizvoda, zatim uža (dublja) kategorija, zatim više relevantnih
-        good.sort(key=lambda c: (-c["share"], -c["depth"], -c["relevant"]))
+        # (udio zaokružen na 0,1 da sitne razlike ne nadjačaju naziv kategorije)
+        for c in good:
+            c["name_score"] = name_score(story, c)
+        good.sort(key=lambda c: (-round(c["share"], 1), -c["name_score"], -c["depth"], -c["relevant"]))
         return good[0], cands
     # b) filtrirani popis (postojeća tražilica webshopa)
     scands = []
@@ -195,7 +211,9 @@ def resolve(story, cats, cat_info):
         scands.append(ev)
     good = [c for c in scands if ok(c)]
     if good:
-        good.sort(key=lambda c: (-c["share"], -c["relevant"]))
+        for c in good:
+            c["name_score"] = name_score(story, c)
+        good.sort(key=lambda c: (-round(c["share"], 1), -c["name_score"], -c["relevant"]))
         return good[0], cands + scands
     # c) ručna provjera
     best = sorted(cands + scands, key=lambda c: (-c["share"] * min(c["relevant"], 10)))
@@ -317,9 +335,9 @@ def main():
         dec, cands = resolve(s, cats, cat_info)
         row = {"id": s["id"], "promovira": s["title"], "ocekivano": s.get("category_hint") or s.get("search"),
                "odluka": dec["type"]}
-        # "prije": dosadašnja logika veže objavu uz jedan artikl (URL proizvoda)
-        rels = [p for c in cands for p in c.get("rel_products", [])]
-        row["prije_url"] = rels[0]["url"] if rels else None
+        # "prije": dosadašnja logika veže objavu uz jedan artikl -> URL proizvoda sa slike
+        src = dec.get("rel_products") or [p for c in cands for p in c.get("rel_products", [])]
+        row["prije_url"] = src[0]["url"] if src else None
         row["kandidati"] = [{k: c[k] for k in ("type", "url", "status", "total", "sampled", "relevant", "share", "variants")}
                             for c in sorted(cands, key=lambda c: -c["relevant"])[:5]]
         if dec["type"] == "manual":
@@ -332,6 +350,8 @@ def main():
         day += 1
         media = f"media/po/story-{s['id']}.jpg"
         img = render(s, dec, ROOT / media)
+        if img:
+            row["prije_url"] = img["product_url"]
         row.update(url=dec["url"], http=dec["status"], h1=dec["h1"], ukupno=dec["total"],
                    relevantnih=f"{dec['relevant']}/{dec['sampled']}", udio=dec["share"],
                    varijanti=dec["variants"], mobilno=mob, slika=media, proizvod_na_slici=img,
