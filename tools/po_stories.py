@@ -311,9 +311,16 @@ def render(story, dec, out_path):
     center(story["cta"], font("Bold", 54), yb)
     url_txt, query = display_url(dec)
     d.rounded_rectangle((90, yb + 95, W - 90, yb + 200), 26, outline=WHITE, width=3)
-    center(url_txt, font("Medium", 44), yb + 120)
+    fs = 44
+    while d.textlength(url_txt, font=font("Medium", fs)) > W - 240 and fs > 28:
+        fs -= 2
+    center(url_txt, font("Medium", fs), yb + 120 + (44 - fs) // 2)
     if query:
         center(f"Tražilica: „{query}”", font("Medium", 40), yb + 225, fill=(210, 225, 215))
+    from PIL import ImageFilter
+    for (x, y, w, h) in story.get("blur", []):
+        reg = im.crop((x, y, x + w, y + h)).filter(ImageFilter.GaussianBlur(14))
+        im.paste(reg, (x, y))
     im.save(out_path, "JPEG", quality=90)
     return used_img
 
@@ -365,7 +372,8 @@ def main():
             row["status"] = "PROVJERI"; row["razlog"] = "nije pronađena slika proizvoda iz skupine"
         report.append(row)
 
-        if "--queue" in args and row["status"] == "OK":
+        row["slika_provjerena"] = bool(s.get("image_checked")) or img is None
+        if "--queue" in args and row["status"] == "OK" and row["slika_provjerena"]:
             q = {"id": f"{when:%Y-%m-%d-%H%M}-po-story-{s['id']}", "approved": False,
                  "when": row["when"], "targets": [plan["target"]], "type": "story", "media": [media],
                  "caption": "", "link": dec["url"],

@@ -20,7 +20,16 @@
     "krovna kutija",
     "krovn"
    ],
-   "exclude": []
+   "exclude": [],
+   "blur": [
+    [
+     745,
+     900,
+     120,
+     55
+    ]
+   ],
+   "image_checked": false
   },
   {
    "id": "zimske-gume",
@@ -33,7 +42,8 @@
     "\\d{3}/\\d{2}\\s*Z?R\\s?\\d{2}"
    ],
    "image": "none",
-   "exclude": []
+   "exclude": [],
+   "image_checked": true
   },
   {
    "id": "hidraulicne-prese",
@@ -57,7 +67,8 @@
     "grijana",
     "french",
     "krovni"
-   ]
+   ],
+   "image_checked": true
   },
   {
    "id": "kompresori",
@@ -69,17 +80,20 @@
     "kompresor"
    ],
    "match": [
-    "kompresor"
+    "^(\\S+\\s){0,2}kompresor"
    ],
    "image_match": [
     "kompresor za radionicu",
     "kompresor"
    ],
    "exclude": [
-    "za kompresor",
+    "aerator",
+    "sladoled",
+    "hladnj",
     "zamjensk",
-    "aerator"
-   ]
+    "za kompresor"
+   ],
+   "image_checked": false
   },
   {
    "id": "dizalice",
@@ -97,7 +111,16 @@
     "niska podna",
     "dizalic"
    ],
-   "exclude": []
+   "exclude": [],
+   "blur": [
+    [
+     425,
+     945,
+     120,
+     70
+    ]
+   ],
+   "image_checked": false
   },
   {
    "id": "grijalice",
@@ -116,7 +139,22 @@
     "topovska",
     "dizelska grijalica"
    ],
-   "exclude": []
+   "exclude": [],
+   "blur": [
+    [
+     575,
+     950,
+     130,
+     95
+    ],
+    [
+     685,
+     1072,
+     60,
+     30
+    ]
+   ],
+   "image_checked": false
   },
   {
    "id": "kamini",
@@ -140,7 +178,8 @@
     "set alata",
     "stalak",
     "set za"
-   ]
+   ],
+   "image_checked": false
   },
   {
    "id": "regali",
@@ -159,7 +198,8 @@
     "metalni regal",
     "regal"
    ],
-   "exclude": []
+   "exclude": [],
+   "image_checked": true
   },
   {
    "id": "ledomati",
@@ -176,7 +216,8 @@
    "image_match": [
     "profesionalni ledomat"
    ],
-   "exclude": []
+   "exclude": [],
+   "image_checked": true
   },
   {
    "id": "zavarivanje",
@@ -199,11 +240,16 @@
     "aparat za zavarivanje"
    ],
    "exclude": [
-    "deka",
     "kolica za",
+    "plastik",
+    "maska",
+    "vruć",
+    "vrućim zrakom",
     "pištolj",
-    "maska"
-   ]
+    "deka",
+    "folij"
+   ],
+   "image_checked": false
   },
   {
    "id": "vitla",
@@ -223,7 +269,16 @@
     "vitlo za čamac",
     "vitlo"
    ],
-   "exclude": []
+   "exclude": [],
+   "blur": [
+    [
+     612,
+     945,
+     95,
+     50
+    ]
+   ],
+   "image_checked": false
   },
   {
    "id": "invalidska-kolica",
@@ -243,7 +298,16 @@
    "exclude": [
     "rampa",
     "za invalidska kolica"
-   ]
+   ],
+   "blur": [
+    [
+     440,
+     965,
+     95,
+     50
+    ]
+   ],
+   "image_checked": false
   },
   {
    "id": "hranilice",
@@ -262,7 +326,16 @@
    "image_match": [
     "hranilica za kokoši"
    ],
-   "exclude": []
+   "exclude": [],
+   "blur": [
+    [
+     315,
+     845,
+     80,
+     40
+    ]
+   ],
+   "image_checked": false
   },
   {
    "id": "indikatori-matica",
@@ -280,7 +353,8 @@
    "image_match": [
     "indikator"
    ],
-   "exclude": []
+   "exclude": [],
+   "image_checked": false
   },
   {
    "id": "alu-felge",
@@ -298,7 +372,8 @@
    "image_match": [
     "felg"
    ],
-   "exclude": []
+   "exclude": [],
+   "image_checked": false
   }
  ]
 }
