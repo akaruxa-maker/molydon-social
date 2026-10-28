@@ -5,6 +5,10 @@ tok = os.environ["META_TOKEN"]
 acc = json.load(open("accounts.json"))["fb:molydon"]
 pid = P.resolve_page_id(acc, tok); ptok = P.page_token(pid, tok)
 out = []
+try:
+    out.append({"file":"_ig","id":pid,"r":P.call("GET",pid,{"fields":"instagram_business_account{username},connected_instagram_account{username}","access_token":ptok},retries=1)})
+except Exception as e:
+    out.append({"file":"_ig","r":{"error":str(e)[:300]}})
 for f in sorted(glob.glob("state/2026-10-0[5-9]*.json")) + sorted(glob.glob("state/2026-10-1*.json")):
     st = json.load(open(f))
     for i in st.get("ids", []):
