@@ -1,0 +1,40 @@
+name: Preuzmi datoteke
+on:
+  workflow_dispatch:
+    inputs:
+      list:
+        description: "datoteka s popisom (url<TAB>putanja po retku)"
+        required: true
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preuzmi
+        run: |
+          set -e
+          while IFS=$'\t' read -r url path; do
+            [ -z "$url" ] && continue
+            mkdir -p "$(dirname "$path")"
+            curl -sSfL -A "Mozilla/5.0" -o "$path" "$url" || echo "FAIL $url" >> fetch_fail.txt
+          done < "${{ inputs.list }}"
+      - name: PDF
+        if: hashFiles('tools/avus/pages/*.jpg') != ''
+        run: |
+          pip install img2pdf pillow -q
+          python3 - <<'PY'
+          import glob, io, img2pdf
+          from PIL import Image
+          fs = sorted(glob.glob("tools/avus/pages/*.jpg"), key=lambda f: int(f.split("/")[-1].split(".")[0]))
+          imgs = []
+          for f in fs:
+              b = io.BytesIO(); Image.open(f).convert("RGB").save(b, "JPEG", quality=82); imgs.append(b.getvalue())
+          open("katalog/avus-katalog-2025.pdf", "wb").write(img2pdf.convert(imgs))
+          PY
+          rm -rf tools/avus/pages
+      - name: Spremi
+        run: |
+          git config user.name "molydon-bot"; git config user.email "bot@users.noreply.github.com"
+          git add -A; git commit -m "preuzeto" || true; git pull --rebase -q || true; git push
