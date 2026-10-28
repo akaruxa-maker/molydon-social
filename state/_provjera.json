@@ -1,5 +1,36 @@
 [
  {
+  "file": "_perm",
+  "r": {
+   "data": [
+    {
+     "permission": "pages_show_list",
+     "status": "granted"
+    },
+    {
+     "permission": "business_management",
+     "status": "granted"
+    },
+    {
+     "permission": "pages_read_engagement",
+     "status": "granted"
+    },
+    {
+     "permission": "pages_manage_metadata",
+     "status": "granted"
+    },
+    {
+     "permission": "pages_manage_posts",
+     "status": "granted"
+    },
+    {
+     "permission": "public_profile",
+     "status": "granted"
+    }
+   ]
+  }
+ },
+ {
   "file": "_ig",
   "id": "233632920914913",
   "r": {
