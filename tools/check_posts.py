@@ -6,6 +6,10 @@ acc = json.load(open("accounts.json"))["fb:molydon"]
 pid = P.resolve_page_id(acc, tok); ptok = P.page_token(pid, tok)
 out = []
 try:
+    out.append({"file":"_perm","r":P.call("GET","me/permissions",{"access_token":tok},retries=1)})
+except Exception as e:
+    out.append({"file":"_perm","r":{"error":str(e)[:300]}})
+try:
     out.append({"file":"_ig","id":pid,"r":P.call("GET",pid,{"fields":"instagram_business_account{username},connected_instagram_account{username}","access_token":ptok},retries=1)})
 except Exception as e:
     out.append({"file":"_ig","r":{"error":str(e)[:300]}})
