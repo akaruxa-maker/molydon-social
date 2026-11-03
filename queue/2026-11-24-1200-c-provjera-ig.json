@@ -1,7 +1,7 @@
 {
-  "id": "2026-11-24-1215-c-provjera-ig",
+  "id": "2026-11-24-1200-c-provjera-ig",
   "approved": true,
-  "when": "2026-11-24T12:15:00+01:00",
+  "when": "2026-11-24T12:00:00+01:00",
   "targets": [
     "ig:molydon"
   ],
