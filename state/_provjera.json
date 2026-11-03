@@ -12,6 +12,14 @@
      "status": "granted"
     },
     {
+     "permission": "instagram_basic",
+     "status": "granted"
+    },
+    {
+     "permission": "instagram_content_publish",
+     "status": "granted"
+    },
+    {
      "permission": "pages_read_engagement",
      "status": "granted"
     },
@@ -34,6 +42,14 @@
   "file": "_ig",
   "id": "233632920914913",
   "r": {
+   "instagram_business_account": {
+    "username": "molydon_webshop",
+    "id": "17841408476252978"
+   },
+   "connected_instagram_account": {
+    "username": "molydon_webshop",
+    "id": "17841408476252978"
+   },
    "id": "233632920914913"
   }
  },
